@@ -11,10 +11,12 @@ public abstract class WeaponBehaviour : MonoBehaviour {
     protected float damageL;
 
     protected float velocity;
+    protected float shootAgain;
 
-    protected bool isFire;
+    protected int fired;
+    protected int shootingLimits;
 
-    protected int capacity;
+    public int capacity;
     protected int penetration;
 
     // Start is called before the first frame update
@@ -24,7 +26,7 @@ public abstract class WeaponBehaviour : MonoBehaviour {
 
     // Update is called once per frame
     protected void Update() {
-
+        
     }
     
     public abstract void Fire();
