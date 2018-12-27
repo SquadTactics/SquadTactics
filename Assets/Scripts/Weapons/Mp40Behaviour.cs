@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Mp40Behaviour : WeaponBehaviour {
 
-    public float temp;
+    // Temp the gun will take to load
+    public float time;
+    private float shootAgain;
 
     // Start is called before the first frame update
     new void Start() {
@@ -17,10 +19,10 @@ public class Mp40Behaviour : WeaponBehaviour {
     new void Update() {
 
         if (this.capacity == 0) {
-            if (this.temp < 3) {
-                this.temp += Time.deltaTime;
-            } else if (temp >= 3) {
-                this.temp = 0;
+            if (this.time < 3) {
+                this.time += Time.deltaTime;
+            } else {
+                this.time = 0;
                 this.capacity = 32;
             }
         }
@@ -45,17 +47,15 @@ public class Mp40Behaviour : WeaponBehaviour {
     public override void Fire() {
         if (this.capacity > 0) {
             if (this.fired <= this.shootingLimits) {
-                Instantiate(this.bullet, this.transform.position, this.transform.rotation);
+                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
                 this.fired++;
                 this.capacity--;
             }
-        } else {
-            //
         }
     }
 
     public override void Reload() {
-        
+
     }
 
     public void OnAbilityFullAuto() {

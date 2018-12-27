@@ -14,4 +14,10 @@ public class BulletMp40Behaviour : BulletsBehaviour {
     new void Update() {
         transform.Translate(Vector3.forward * this.velocity * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(UnityEngine.Collision collision) {
+        if (collision.other.CompareTag("parede")) {
+            Destroy(collision.other);
+        }
+    }
 }
