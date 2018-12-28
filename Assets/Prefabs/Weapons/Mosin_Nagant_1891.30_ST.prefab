@@ -347,7 +347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563548797254372541}
-  - component: {fileID: 523325745}
+  - component: {fileID: 165254152}
   m_Layer: 0
   m_Name: Mosin_Nagant_1891.30_ST
   m_TagString: Untagged
@@ -374,7 +374,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &523325745
+--- !u!114 &165254152
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,8 +383,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6451200410857409324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77810f46e67e8ca4695e6fd297d34985, type: 3}
+  m_Script: {fileID: 11500000, guid: 86499173d8297b2499b7105404484cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 5938118378610878620, guid: f5be17b8fc6129e4b846e0a778dbea92, type: 3}
+  bullet: {fileID: 6648521655485677084, guid: f7f51c6137abdc94193cf903e3d335ee, type: 3}
   gunBarrel: {fileID: 1933395053}

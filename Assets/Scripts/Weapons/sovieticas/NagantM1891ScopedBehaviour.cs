@@ -9,7 +9,7 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
     // Use this for initialization
     void Start() {
         this.shootingLimits = 1;
-        this.shootAgain = 5;
+        this.shootAgain = 7;
         this.capacity = 5;
     }
 
