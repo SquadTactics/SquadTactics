@@ -61,10 +61,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullets\BulletMp40Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Bullets\BulletNagantBehaviour.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletsBehaviour.cs" />
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBehaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\Mp40Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Weapons\NagantBehaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\WeaponBehaviour.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>F:/Rick/Documentos/Unity/TestesDeArmas/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
