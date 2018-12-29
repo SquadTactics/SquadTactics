@@ -17,6 +17,7 @@ public class NagantBehaviour : WeaponBehaviour
 
     // Update is called once per frame
     void Update() {
+
         if (this.fired >= this.shootingLimits) {
             this.velocity += Time.deltaTime;
             if (this.velocity >= this.shootAgain) {
