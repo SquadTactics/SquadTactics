@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullets\Alemaes\BulletMp40Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Bullets\Alemaes\BulletP38Behaviour.cs" />
     <Compile Include="Assets\Scripts\Bullets\BulletsBehaviour.cs" />
     <Compile Include="Assets\Scripts\Bullets\Sovieticas\BulletNagantBehaviour.cs" />
     <Compile Include="Assets\Scripts\Bullets\Sovieticas\BulletNagantM1891Behaviour.cs" />
@@ -68,6 +69,8 @@
     <Compile Include="Assets\Scripts\Collision.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerBehaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\alemaes\Mp40Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Weapons\alemaes\P38Behaviour.cs" />
+    <Compile Include="Assets\Scripts\Weapons\sovieticas\DP28Behaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\sovieticas\NagantBehaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\sovieticas\NagantM1891Behaviour.cs" />
     <Compile Include="Assets\Scripts\Weapons\sovieticas\NagantM1891ScopedBehaviour.cs" />

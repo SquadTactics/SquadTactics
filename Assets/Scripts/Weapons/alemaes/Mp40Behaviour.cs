@@ -9,15 +9,14 @@ public class Mp40Behaviour : WeaponBehaviour {
     private float shootAgain;
 
     // Start is called before the first frame update
-    new void Start() {
+    void Start() {
         this.shootingLimits = 4;
         this.shootAgain = 1;
         this.capacity = 32;
     }
 
     // Update is called once per frame
-    new void Update() {
-
+    void Update() {
         if (this.capacity == 0) {
             if (this.time < 3) {
                 this.time += Time.deltaTime;
@@ -68,5 +67,4 @@ public class Mp40Behaviour : WeaponBehaviour {
         this.shootingLimits = 4;
         this.shootAgain = 1;
     }
-
 }
