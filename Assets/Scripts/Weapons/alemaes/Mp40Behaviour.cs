@@ -10,7 +10,6 @@ public class Mp40Behaviour : WeaponBehaviour {
 
     // Start is called before the first frame update
     new void Start() {
-        this.shootingLimits = 4;
         this.shootAgain = 1;
         this.capacity = 32;
     }
@@ -27,14 +26,6 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }
 
-        if (this.fired >= this.shootingLimits) {
-            this.velocity += Time.deltaTime;
-            if (this.velocity >= this.shootAgain) {
-                this.fired = 0;
-                this.velocity = 0;
-            }
-        }
-
         if (Input.GetButtonDown("W")) {
             this.OnAbilityFullAuto();
         }
@@ -45,20 +36,46 @@ public class Mp40Behaviour : WeaponBehaviour {
     }
 
     public override void Fire() {
-        while (this.fired < this.shootingLimits && this.capacity > 0) {
-            StartCoroutine(Example());
-            Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-            this.fired++;
-            this.capacity--;
+        int sorteio = (int)Random.Range(4, 7);
+        Debug.Log("Balas: " + sorteio);
+        StartCoroutine(Disparar(sorteio));
+    }
+
+    private IEnumerator Disparar(int vezes) {
+        if (this.fired < 1)
+        {
+            for (int i = 0; i < vezes; i++)
+            {
+                if (this.capacity > 0)
+                {
+                    Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
+                    this.capacity--;
+                    yield return new WaitForSeconds(0.2f);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            this.fired = 1;
+            Debug.Log("Capacidade: " + this.capacity);
+        } else
+        {
+            this.fired = 0;
+            yield return new WaitForSeconds(1);
         }
     }
 
-    IEnumerator Example() {
-        yield return new WaitForSeconds(1);
-    }
-
     public override void Reload() {
-
+        if (this.capacity == 0) {
+            if (this.time < 3) {
+                this.time += Time.deltaTime;
+            }
+            else {
+                this.time = 0;
+                this.capacity = 32;
+            }
+        }
     }
 
     public void OnAbilityFullAuto() {
