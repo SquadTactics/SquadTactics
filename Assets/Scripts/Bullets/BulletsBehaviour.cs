@@ -16,4 +16,13 @@ public abstract class BulletsBehaviour : MonoBehaviour {
     protected void Update() {
         
     }
+
+    private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        if (!(collision.gameObject.tag == "projetil"))
+        {
+            Debug.Log("OKOK");
+            Destroy(this.gameObject);
+        }
+    }
 }

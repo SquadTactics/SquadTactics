@@ -27,7 +27,7 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }
 
-        if (this.fired > this.shootingLimits) {
+        if (this.fired >= this.shootingLimits) {
             this.velocity += Time.deltaTime;
             if (this.velocity >= this.shootAgain) {
                 this.fired = 0;
@@ -45,13 +45,16 @@ public class Mp40Behaviour : WeaponBehaviour {
     }
 
     public override void Fire() {
-        if (this.capacity > 0) {
-            if (this.fired <= this.shootingLimits) {
-                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-                this.fired++;
-                this.capacity--;
-            }
+        while (this.fired < this.shootingLimits && this.capacity > 0) {
+            StartCoroutine(Example());
+            Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
+            this.fired++;
+            this.capacity--;
         }
+    }
+
+    IEnumerator Example() {
+        yield return new WaitForSeconds(1);
     }
 
     public override void Reload() {
