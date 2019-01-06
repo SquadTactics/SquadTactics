@@ -4,40 +4,46 @@ using System.Collections;
 
 public class P38Behaviour : WeaponBehaviour {
 
-    private float shootAgain;
 
     // Use this for initialization
     new void Start() {
         this.limitesDeDisparos = 1;
-        this.shootAgain = 4;
         this.capacidade = 8;
     }
 
     // Update is called once per frame
     new void Update() {
 
-        if (this.disparados >= this.limitesDeDisparos) {
-            this.velocidade += Time.deltaTime;
-            if (this.velocidade >= this.shootAgain) {
-                this.disparados = 0;
-                this.velocidade = 0;
-            }
+        if (this.disparados < this.limitesDeDisparos && this.capacidade > 0)
+        {
+            this.podeAtirar = true;
         }
 
+        if (this.capacidade == 0) {
+            StartCoroutine(Recarregar());
+        }
     }
 
     public override void Atirar() {
-        if (this.capacidade > 0) {
-            if (this.disparados < this.limitesDeDisparos) {
-                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-                this.disparados++;
-                this.capacidade--;
-            }
+        if (this.podeAtirar) {
+            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+            this.disparados++;
+            this.capacidade--;
+            this.podeAtirar = false;
+            StartCoroutine(EsperarPraAtirar());
         }
     }
 
-    public override void Recarregar() {
-        
+    public override IEnumerator Recarregar() {
+        yield return new WaitForSeconds(3);
+        this.capacidade = 8;
+    }
+
+    private IEnumerator EsperarPraAtirar() {
+        int tempo = (int)Random.Range(3, 6);
+        yield return new WaitForSeconds(tempo);
+        this.podeAtirar = true;
+        this.disparados = 0;
     }
 
 }

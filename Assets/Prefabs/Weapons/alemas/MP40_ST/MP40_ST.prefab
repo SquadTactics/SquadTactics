@@ -651,6 +651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7818b3a031ef5547aa2909d6c51936e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4759326974541234139, guid: 8106c40bc439185469f19a50ccdf9527, type: 3}
-  gunBarrel: {fileID: 1979790863}
-  time: 0
+  projetil: {fileID: 4759326974541234139, guid: 8106c40bc439185469f19a50ccdf9527,
+    type: 3}
+  disparados: 0
+  podeAtirar: 0
+  canoDaArma: {fileID: 1979790863}

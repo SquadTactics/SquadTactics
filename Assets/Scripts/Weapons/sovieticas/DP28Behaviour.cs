@@ -51,9 +51,9 @@ public class DP28Behaviour : WeaponBehaviour {
         }
     }
 
-    public override void Recarregar()
+    public override IEnumerator Recarregar()
     {
-
+        yield return new WaitForSeconds(0);
     }
 
     public void OnAbilityFullAuto()

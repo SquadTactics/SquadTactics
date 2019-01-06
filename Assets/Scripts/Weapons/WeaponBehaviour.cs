@@ -40,7 +40,7 @@ public abstract class WeaponBehaviour : MonoBehaviour {
 
     // Start is called before the first frame update
     protected void Start() {
-        this.Atirar();
+
     }
 
     // Update is called once per frame
@@ -56,5 +56,5 @@ public abstract class WeaponBehaviour : MonoBehaviour {
     /// <summary>
     ///     Method that deals with the logic of reloading the weapon.
     /// </summary>
-    public abstract void Recarregar();
+    public abstract IEnumerator Recarregar();
 }

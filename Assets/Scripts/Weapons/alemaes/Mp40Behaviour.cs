@@ -18,14 +18,14 @@ public class Mp40Behaviour : WeaponBehaviour {
     // Update is called once per frame
     new void Update() {
 
-        if (this.capacidade == 0) {
+        /*if (this.capacidade == 0) {
             if (this.tempo < 3) {
                 this.tempo += Time.deltaTime;
             } else {
                 this.tempo = 0;
                 this.capacidade = 32;
             }
-        }
+        }*/
 
         if (Input.GetButtonDown("W")) {
             this.AtivarModoFull();
@@ -34,6 +34,10 @@ public class Mp40Behaviour : WeaponBehaviour {
         if (Input.GetButtonDown("Q")) {
             this.AtivarModoNormal();
         }
+
+        if (this.capacidade == 0) {
+            StartCoroutine(Recarregar());
+        }
     }
 
     public override void Atirar() {
@@ -41,13 +45,11 @@ public class Mp40Behaviour : WeaponBehaviour {
             if (!this.modoFull) {
                 this.podeAtirar = false;
                 int sorteio = (int)Random.Range(4, 7);
-                Debug.Log("Balas: " + sorteio);
                 StartCoroutine(Disparar(sorteio, 1));
             } else {
                 this.podeAtirar = false;
                 StartCoroutine(Disparar(32, 5));
             }
-            
         }
     }
 
@@ -61,21 +63,13 @@ public class Mp40Behaviour : WeaponBehaviour {
                 yield return new WaitForSeconds(0.2f);
             }
         }
-        Debug.Log("Capacidade: " + this.capacidade);
         yield return new WaitForSeconds(tempoPraVoltarAtirar);
         this.podeAtirar = true;
     }
 
-    public override void Recarregar() {
-        if (this.capacidade == 0) {
-            if (this.tempo < 3) {
-                this.tempo += Time.deltaTime;
-            }
-            else {
-                this.tempo = 0;
-                this.capacidade = 32;
-            }
-        }
+    public override IEnumerator Recarregar() {
+        yield return new WaitForSeconds(3);
+        this.capacidade = 32;
     }
 
     public void AtivarModoFull() {

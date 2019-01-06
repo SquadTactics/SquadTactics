@@ -35,7 +35,8 @@ public class NagantM1891Behaviour : WeaponBehaviour
         }
     }
 
-    public override void Recarregar() {
-        throw new System.NotImplementedException();
+    public override IEnumerator Recarregar()
+    {
+        yield return new WaitForSeconds(0);
     }
 }

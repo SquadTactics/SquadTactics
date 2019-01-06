@@ -21,7 +21,6 @@ public abstract class BulletsBehaviour : MonoBehaviour {
     {
         if (!(collision.gameObject.tag == "projetil"))
         {
-            Debug.Log("OKOK");
             Destroy(this.gameObject);
         }
     }
