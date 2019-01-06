@@ -7,14 +7,14 @@ public class Mp40Behaviour : WeaponBehaviour {
 
     // Temp the gun will take to load
     public float time;
-    private float shootAgain;
     private bool podeAtirar;
+    private bool modoFull;
 
     // Start is called before the first frame update
     new void Start() {
-        this.shootAgain = 1;
         this.capacity = 32;
         this.podeAtirar = true;
+        this.modoFull = false;
     }
 
     // Update is called once per frame
@@ -29,13 +29,6 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }
 
-        if (Input.GetButtonDown("Fire1") && this.podeAtirar) {
-            this.podeAtirar = false;
-            int sorteio = (int)Random.Range(4, 7);
-            Debug.Log("Balas: " + sorteio);
-            StartCoroutine(Disparar(sorteio));
-        }
-
         if (Input.GetButtonDown("W")) {
             this.OnAbilityFullAuto();
         }
@@ -46,12 +39,21 @@ public class Mp40Behaviour : WeaponBehaviour {
     }
 
     public override void Fire() {
-        int sorteio = (int)Random.Range(4, 7);
-        Debug.Log("Balas: " + sorteio);
-        StartCoroutine(Disparar(sorteio));
+        if (this.podeAtirar) {
+            if (!this.modoFull) {
+                this.podeAtirar = false;
+                int sorteio = (int)Random.Range(4, 7);
+                Debug.Log("Balas: " + sorteio);
+                StartCoroutine(Disparar(sorteio, 1));
+            } else {
+                this.podeAtirar = false;
+                StartCoroutine(Disparar(32, 5));
+            }
+            
+        }
     }
 
-    private IEnumerator Disparar(int vezes) {
+    private IEnumerator Disparar(int vezes, int tempoPraVoltarAtirar) {
         for (int i = 0; i < vezes; i++)
         {
             if (this.capacity > 0)
@@ -62,7 +64,7 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }
         Debug.Log("Capacidade: " + this.capacity);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(tempoPraVoltarAtirar);
         this.podeAtirar = true;
     }
 
@@ -84,14 +86,11 @@ public class Mp40Behaviour : WeaponBehaviour {
     }
 
     public void OnAbilityFullAuto() {
-        this.shootingLimits = 32;
-        this.shootAgain = 5;
-        this.velocity = 0;
+        this.modoFull = true;
     }
 
     public void OnNormal() {
-        this.shootingLimits = 4;
-        this.shootAgain = 1;
+        this.modoFull = false;
     }
 
 }
