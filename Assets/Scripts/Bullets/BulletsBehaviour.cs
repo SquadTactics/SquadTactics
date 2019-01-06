@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class BulletsBehaviour : MonoBehaviour {
 
-    protected float velocity;
-    protected float timeToLive;
+    protected float velocidade;
+    protected float tempoDeVida;
 
     // Start is called before the first frame update
     protected void Start() {
