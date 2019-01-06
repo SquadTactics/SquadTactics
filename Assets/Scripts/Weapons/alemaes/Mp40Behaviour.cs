@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 
 public class Mp40Behaviour : WeaponBehaviour {
@@ -7,11 +8,13 @@ public class Mp40Behaviour : WeaponBehaviour {
     // Temp the gun will take to load
     public float time;
     private float shootAgain;
+    private bool podeAtirar;
 
     // Start is called before the first frame update
     new void Start() {
         this.shootAgain = 1;
         this.capacity = 32;
+        this.podeAtirar = true;
     }
 
     // Update is called once per frame
@@ -24,6 +27,13 @@ public class Mp40Behaviour : WeaponBehaviour {
                 this.time = 0;
                 this.capacity = 32;
             }
+        }
+
+        if (Input.GetButtonDown("Fire1") && this.podeAtirar) {
+            this.podeAtirar = false;
+            int sorteio = (int)Random.Range(4, 7);
+            Debug.Log("Balas: " + sorteio);
+            StartCoroutine(Disparar(sorteio));
         }
 
         if (Input.GetButtonDown("W")) {
@@ -42,28 +52,23 @@ public class Mp40Behaviour : WeaponBehaviour {
     }
 
     private IEnumerator Disparar(int vezes) {
-        if (this.fired < 1)
+        for (int i = 0; i < vezes; i++)
         {
-            for (int i = 0; i < vezes; i++)
+            if (this.capacity > 0)
             {
-                if (this.capacity > 0)
-                {
-                    Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-                    this.capacity--;
-                    yield return new WaitForSeconds(0.2f);
-                }
-                else
-                {
-                    break;
-                }
+                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
+                this.capacity--;
+                yield return new WaitForSeconds(0.2f);
             }
-            this.fired = 1;
-            Debug.Log("Capacidade: " + this.capacity);
-        } else
-        {
-            this.fired = 0;
-            yield return new WaitForSeconds(1);
         }
+        Debug.Log("Capacidade: " + this.capacity);
+        yield return new WaitForSeconds(1);
+        this.podeAtirar = true;
+    }
+
+    private IEnumerator EsperarPraAtirar() {
+        yield return new WaitForSeconds(1);
+        this.podeAtirar = true;
     }
 
     public override void Reload() {
