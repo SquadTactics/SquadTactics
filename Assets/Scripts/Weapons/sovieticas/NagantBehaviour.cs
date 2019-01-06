@@ -5,39 +5,38 @@ using UnityEngine;
 public class NagantBehaviour : WeaponBehaviour
 {
 
-    private float time;
     private float shootAgain;
 
     // Start is called before the first frame update
-    void Start() {
-        this.shootingLimits = 1;
+    new void Start() {
+        this.limitesDeDisparos = 1;
         this.shootAgain = 4;
-        this.capacity = 7;
+        this.capacidade = 7;
     }
 
     // Update is called once per frame
-    void Update() {
+    new void Update() {
 
-        if (this.fired >= this.shootingLimits) {
-            this.velocity += Time.deltaTime;
-            if (this.velocity >= this.shootAgain) {
-                this.velocity = 0;
-                this.fired = 0;
+        if (this.disparados >= this.limitesDeDisparos) {
+            this.velocidade += Time.deltaTime;
+            if (this.velocidade >= this.shootAgain) {
+                this.velocidade = 0;
+                this.disparados = 0;
             }
         }
     }
 
-    public override void Fire() {
-        if (this.capacity > 0) {
-            if (this.fired < this.shootingLimits) {
-                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-                this.fired++;
-                this.capacity--;
+    public override void Atirar() {
+        if (this.capacidade > 0) {
+            if (this.disparados < this.limitesDeDisparos) {
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.disparados++;
+                this.capacidade--;
             }
         }
     }
 
-    public override void Reload() {
+    public override void Recarregar() {
         throw new System.NotImplementedException();
     }
 }

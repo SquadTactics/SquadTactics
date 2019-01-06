@@ -4,15 +4,13 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 public class Mp40Behaviour : WeaponBehaviour {
-
-    // Temp the gun will take to load
-    public float time;
-    private bool podeAtirar;
+    
+    // O modo em que a arma estar.
     private bool modoFull;
 
     // Start is called before the first frame update
     new void Start() {
-        this.capacity = 32;
+        this.capacidade = 32;
         this.podeAtirar = true;
         this.modoFull = false;
     }
@@ -20,25 +18,25 @@ public class Mp40Behaviour : WeaponBehaviour {
     // Update is called once per frame
     new void Update() {
 
-        if (this.capacity == 0) {
-            if (this.time < 3) {
-                this.time += Time.deltaTime;
+        if (this.capacidade == 0) {
+            if (this.tempo < 3) {
+                this.tempo += Time.deltaTime;
             } else {
-                this.time = 0;
-                this.capacity = 32;
+                this.tempo = 0;
+                this.capacidade = 32;
             }
         }
 
         if (Input.GetButtonDown("W")) {
-            this.OnAbilityFullAuto();
+            this.AtivarModoFull();
         }
 
         if (Input.GetButtonDown("Q")) {
-            this.OnNormal();
+            this.AtivarModoNormal();
         }
     }
 
-    public override void Fire() {
+    public override void Atirar() {
         if (this.podeAtirar) {
             if (!this.modoFull) {
                 this.podeAtirar = false;
@@ -56,40 +54,35 @@ public class Mp40Behaviour : WeaponBehaviour {
     private IEnumerator Disparar(int vezes, int tempoPraVoltarAtirar) {
         for (int i = 0; i < vezes; i++)
         {
-            if (this.capacity > 0)
+            if (this.capacidade > 0)
             {
-                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-                this.capacity--;
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
             }
         }
-        Debug.Log("Capacidade: " + this.capacity);
+        Debug.Log("Capacidade: " + this.capacidade);
         yield return new WaitForSeconds(tempoPraVoltarAtirar);
         this.podeAtirar = true;
     }
 
-    private IEnumerator EsperarPraAtirar() {
-        yield return new WaitForSeconds(1);
-        this.podeAtirar = true;
-    }
-
-    public override void Reload() {
-        if (this.capacity == 0) {
-            if (this.time < 3) {
-                this.time += Time.deltaTime;
+    public override void Recarregar() {
+        if (this.capacidade == 0) {
+            if (this.tempo < 3) {
+                this.tempo += Time.deltaTime;
             }
             else {
-                this.time = 0;
-                this.capacity = 32;
+                this.tempo = 0;
+                this.capacidade = 32;
             }
         }
     }
 
-    public void OnAbilityFullAuto() {
+    public void AtivarModoFull() {
         this.modoFull = true;
     }
 
-    public void OnNormal() {
+    public void AtivarModoNormal() {
         this.modoFull = false;
     }
 

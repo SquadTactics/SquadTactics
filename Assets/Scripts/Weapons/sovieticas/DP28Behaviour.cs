@@ -3,34 +3,32 @@ using System.Collections;
 
 public class DP28Behaviour : WeaponBehaviour {
 
-    // Temp the gun will take to load
-    public float time;
     private float shootAgain;
 
     // Start is called before the first frame update
-    void Start() {
-        this.shootingLimits = 6;
+    new void Start() {
+        this.limitesDeDisparos = 6;
         this.shootAgain = 1;
-        this.capacity = 45;
+        this.capacidade = 45;
     }
 
     // Update is called once per frame
-    void Update() {
-        if (this.capacity == 0) {
-            if (this.time < 3) {
-                this.time += Time.deltaTime;
+    new void Update() {
+        if (this.capacidade == 0) {
+            if (this.tempo < 3) {
+                this.tempo += Time.deltaTime;
             }
             else {
-                this.time = 0;
-                this.capacity = 32;
+                this.tempo = 0;
+                this.capacidade = 32;
             }
         }
 
-        if (this.fired > this.shootingLimits) {
-            this.velocity += Time.deltaTime;
-            if (this.velocity >= this.shootAgain) {
-                this.fired = 0;
-                this.velocity = 0;
+        if (this.disparados > this.limitesDeDisparos) {
+            this.velocidade += Time.deltaTime;
+            if (this.velocidade >= this.shootAgain) {
+                this.disparados = 0;
+                this.velocidade = 0;
             }
         }
 
@@ -43,31 +41,31 @@ public class DP28Behaviour : WeaponBehaviour {
         }
     }
 
-    public override void Fire() {
-        if (this.capacity > 0) {
-            if (this.fired <= this.shootingLimits) {
-                Instantiate(this.bullet, this.gunBarrel.position, this.gunBarrel.rotation);
-                this.fired++;
-                this.capacity--;
+    public override void Atirar() {
+        if (this.capacidade > 0) {
+            if (this.disparados <= this.limitesDeDisparos) {
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.disparados++;
+                this.capacidade--;
             }
         }
     }
 
-    public override void Reload()
+    public override void Recarregar()
     {
 
     }
 
     public void OnAbilityFullAuto()
     {
-        this.shootingLimits = 45;
+        this.limitesDeDisparos = 45;
         this.shootAgain = 6;
-        this.velocity = 0;
+        this.velocidade = 0;
     }
 
     public void OnNormal()
     {
-        this.shootingLimits = 6;
+        this.limitesDeDisparos = 6;
         this.shootAgain = 1;
     }
 }
