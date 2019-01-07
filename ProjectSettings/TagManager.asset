@@ -6,6 +6,7 @@ TagManager:
   tags:
   - parede
   - projetil
+  - landser
   layers:
   - Default
   - TransparentFX

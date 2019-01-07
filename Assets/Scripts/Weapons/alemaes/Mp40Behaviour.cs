@@ -27,6 +27,10 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }*/
 
+        if (Input.GetButtonDown("Fire1")) {
+            this.Atirar();
+        }
+
         if (Input.GetButtonDown("W")) {
             this.AtivarModoFull();
         }

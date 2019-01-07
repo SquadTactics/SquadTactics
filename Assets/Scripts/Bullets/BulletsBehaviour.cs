@@ -4,8 +4,8 @@ using UnityEngine;
 
 public abstract class BulletsBehaviour : MonoBehaviour {
 
-    protected float velocidade;
-    protected float tempoDeVida;
+    public float velocidade;
+    public float tempoDeVida;
 
     // Start is called before the first frame update
     protected void Start() {
@@ -15,13 +15,5 @@ public abstract class BulletsBehaviour : MonoBehaviour {
     // Update is called once per frame
     protected void Update() {
         
-    }
-
-    private void OnCollisionEnter(UnityEngine.Collision collision)
-    {
-        if (!(collision.gameObject.tag == "projetil"))
-        {
-            Destroy(this.gameObject);
-        }
     }
 }
