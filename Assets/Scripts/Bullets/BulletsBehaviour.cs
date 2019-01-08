@@ -13,6 +13,8 @@ public abstract class BulletsBehaviour : MonoBehaviour {
 
     protected float dano;
 
+    protected Vector3 origem;
+
     // Start is called before the first frame update
     protected void Start() {
 

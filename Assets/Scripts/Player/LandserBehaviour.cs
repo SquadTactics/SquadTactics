@@ -13,7 +13,7 @@ public class LandserBehaviour : PlayerBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.vida == 0) {
+        if (this.vida <= 0) {
             Destroy(this.gameObject, 1);
         }
     }

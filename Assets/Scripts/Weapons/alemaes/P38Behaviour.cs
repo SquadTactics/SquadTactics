@@ -14,6 +14,10 @@ public class P38Behaviour : WeaponBehaviour {
     // Update is called once per frame
     new void Update() {
 
+        if (Input.GetButtonDown("Fire1")) {
+            this.Atirar();
+        }
+
         if (this.disparados < this.limitesDeDisparos && this.capacidade > 0)
         {
             this.podeAtirar = true;
@@ -45,5 +49,4 @@ public class P38Behaviour : WeaponBehaviour {
         this.podeAtirar = true;
         this.disparados = 0;
     }
-
 }

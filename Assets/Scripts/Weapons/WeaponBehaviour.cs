@@ -10,11 +10,6 @@ public abstract class WeaponBehaviour : MonoBehaviour {
     // Bullet.
     public BulletsBehaviour projetil;
 
-    // Damages.
-    protected float danoPequena;
-    protected float DanoMedio;
-    protected float DanoLongo;
-
     // Speed that the gun can re-shoot.
     protected float velocidade;
 
