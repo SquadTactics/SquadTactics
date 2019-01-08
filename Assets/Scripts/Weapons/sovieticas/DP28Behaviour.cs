@@ -3,69 +3,75 @@ using System.Collections;
 
 public class DP28Behaviour : WeaponBehaviour {
 
-    private float shootAgain;
+    private bool modoSupressao;
 
     // Start is called before the first frame update
     new void Start() {
-        this.limitesDeDisparos = 6;
-        this.shootAgain = 1;
+        this.podeAtirar = true;
+        this.modoSupressao = false;
         this.capacidade = 45;
     }
 
     // Update is called once per frame
     new void Update() {
-        if (this.capacidade == 0) {
-            if (this.tempo < 3) {
-                this.tempo += Time.deltaTime;
-            }
-            else {
-                this.tempo = 0;
-                this.capacidade = 32;
-            }
+
+        if (Input.GetButtonDown("Fire1")) {
+            this.Atirar();
         }
 
-        if (this.disparados > this.limitesDeDisparos) {
-            this.velocidade += Time.deltaTime;
-            if (this.velocidade >= this.shootAgain) {
-                this.disparados = 0;
-                this.velocidade = 0;
-            }
+        if (this.capacidade == 0) {
+            this.podeAtirar = false;
+            StartCoroutine(Recarregar());
         }
 
         if (Input.GetButtonDown("W")) {
-            this.OnAbilityFullAuto();
+            this.AtivarModoSupressao();
         }
 
         if (Input.GetButtonDown("Q")) {
-            this.OnNormal();
+            this.AtivarModoNormal();
         }
     }
 
     public override void Atirar() {
-        if (this.capacidade > 0) {
-            if (this.disparados <= this.limitesDeDisparos) {
-                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-                this.disparados++;
-                this.capacidade--;
+        if (this.podeAtirar) {
+            this.podeAtirar = false;
+            if (!this.modoSupressao) {
+                int sorteio = (int)Random.Range(5, 8);
+                StartCoroutine(Disparar(sorteio, 1));
+            } else {
+                StartCoroutine(Disparar(45, 6));
             }
         }
     }
 
+    private IEnumerator Disparar(int vezes, int tempoPraVoltarAtirar)
+    {
+        for (int i = 0; i < vezes; i++)
+        {
+            if (this.capacidade > 0)
+            {
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.capacidade--;
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
+        yield return new WaitForSeconds(tempoPraVoltarAtirar);
+        this.podeAtirar = true;
+    }
+
     public override IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(3);
+        this.capacidade = 45;
+        this.podeAtirar = true;
     }
 
-    public void OnAbilityFullAuto()
-    {
-        this.limitesDeDisparos = 45;
-        this.shootAgain = 6;
-        this.velocidade = 0;
+    public void AtivarModoSupressao() {
+        this.modoSupressao = true;
     }
 
-    public void OnNormal()
-    {
-        this.limitesDeDisparos = 6;
-        this.shootAgain = 1;
+    public void AtivarModoNormal() {
+        this.modoSupressao = false;
     }
 }
