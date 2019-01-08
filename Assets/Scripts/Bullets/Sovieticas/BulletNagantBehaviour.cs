@@ -6,9 +6,7 @@ public class BulletNagantBehaviour : BulletsBehaviour
 
     // Use this for initialization
     new void Start() {
-        this.tempoDeVida = 5;
         this.velocidade = 1;
-        Destroy(this.gameObject, this.tempoDeVida);
     }
 
     // Update is called once per frame

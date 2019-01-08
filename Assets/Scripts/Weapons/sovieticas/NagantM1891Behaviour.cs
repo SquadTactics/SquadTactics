@@ -3,40 +3,47 @@ using System.Collections;
 
 public class NagantM1891Behaviour : WeaponBehaviour
 {
-    private float shootAgain;
-
-    // Use this for initialization
-    new void Start() {
-        this.limitesDeDisparos = 1;
-        this.shootAgain = 5;
-        this.capacidade = 5;
+    // Start is called before the first frame update
+    new void Start()
+    {
+        this.podeAtirar = true;
+        this.capacidade = 7;
     }
 
     // Update is called once per frame
-    new void Update() {
-
-        if (this.disparados >= this.limitesDeDisparos) {
-            this.velocidade += Time.deltaTime;
-            if (this.velocidade >= this.shootAgain) {
-                this.disparados = 0;
-                this.velocidade = 0;
-            }
+    new void Update()
+    {
+        if (Input.GetButtonDown("Fire1")) {
+            this.Atirar();
         }
 
+        if (this.capacidade == 0) {
+            this.podeAtirar = false;
+            StartCoroutine(this.Recarregar());
+        }
     }
 
-    public override void Atirar() {
-        if (this.capacidade > 0) {
-            if (this.disparados < this.limitesDeDisparos) {
-                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-                this.disparados++;
-                this.capacidade--;
-            }
+    public override void Atirar()
+    {
+        if (this.podeAtirar)
+        {
+            this.podeAtirar = false;
+            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+            this.capacidade--;
+            StartCoroutine(this.EsperarPraAtirar());
         }
+    }
+
+    private IEnumerator EsperarPraAtirar()
+    {
+        int tempo = Random.Range(4, 7);
+        yield return new WaitForSeconds(tempo);
+        this.podeAtirar = true;
     }
 
     public override IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(3);
+        this.podeAtirar = true;
     }
 }

@@ -37,7 +37,7 @@ public class DP28Behaviour : WeaponBehaviour {
         if (this.podeAtirar) {
             this.podeAtirar = false;
             if (!this.modoSupressao) {
-                int sorteio = (int)Random.Range(5, 8);
+                int sorteio = (int)Random.Range(5, 7);
                 StartCoroutine(Disparar(sorteio, 1));
             } else {
                 StartCoroutine(Disparar(45, 6));

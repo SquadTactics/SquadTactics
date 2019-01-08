@@ -44,7 +44,7 @@ public class P38Behaviour : WeaponBehaviour {
     }
 
     private IEnumerator EsperarPraAtirar() {
-        int tempo = (int)Random.Range(3, 6);
+        int tempo = (int)Random.Range(3, 5);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
         this.disparados = 0;

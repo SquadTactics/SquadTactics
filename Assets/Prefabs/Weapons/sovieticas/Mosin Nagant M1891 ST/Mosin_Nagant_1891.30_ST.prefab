@@ -78,8 +78,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86499173d8297b2499b7105404484cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 6648521655485677084, guid: f7f51c6137abdc94193cf903e3d335ee, type: 3}
-  gunBarrel: {fileID: 1185666784}
+  projetil: {fileID: 6648521655485677084, guid: f7f51c6137abdc94193cf903e3d335ee,
+    type: 3}
+  canoDaArma: {fileID: 1185666784}
 --- !u!1 &3340388887553457852
 GameObject:
   m_ObjectHideFlags: 0
