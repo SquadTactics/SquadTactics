@@ -7,6 +7,12 @@ public abstract class BulletsBehaviour : MonoBehaviour {
     public float velocidade;
     public float tempoDeVida;
 
+    protected float danoPequena;
+    protected float danoMedio;
+    protected float danoLongo;
+
+    protected float dano;
+
     // Start is called before the first frame update
     protected void Start() {
 

@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559347678}
-  m_LocalRotation: {x: 0.60181504, y: 0, z: 0, w: 0.79863554}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 312190362}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 74, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!20 &559347680
 Camera:
   m_ObjectHideFlags: 0
@@ -83,6 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 312190362}
   - component: {fileID: 8291236419154338026}
+  - component: {fileID: 899920362}
   m_Layer: 0
   m_Name: landser
   m_TagString: landser
@@ -121,6 +122,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 0}
+  vida: 0
+--- !u!65 &899920362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404344726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1635795, y: 1.8475266, z: 0.3266603}
+  m_Center: {x: -0.00233683, y: 0.94100475, z: -0.012469232}
 --- !u!1 &1919460346
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +220,6 @@ GameObject:
   - component: {fileID: 1950266819}
   - component: {fileID: 1950266821}
   - component: {fileID: 1950266820}
-  - component: {fileID: 3445145504260096395}
   m_Layer: 0
   m_Name: landser
   m_TagString: Untagged
@@ -280,19 +294,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3445145504260096395
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950266818}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.4209772, y: 1.8555183, z: 0.32514566}
-  m_Center: {x: 0, y: 0.9277592, z: 0}
 --- !u!1001 &72251081
 PrefabInstance:
   m_ObjectHideFlags: 0

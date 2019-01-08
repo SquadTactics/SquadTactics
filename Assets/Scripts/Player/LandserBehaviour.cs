@@ -14,7 +14,6 @@ public class LandserBehaviour : PlayerBehaviour
     void Update()
     {
         if (this.vida == 0) {
-            Debug.Log("Morri!");
             Destroy(this.gameObject, 1);
         }
     }
