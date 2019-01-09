@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NagantBehaviour : WeaponBehaviour
+public class Nagant1895Behaviour : WeaponBehaviour
 {
 
     // Start is called before the first frame update

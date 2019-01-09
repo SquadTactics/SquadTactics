@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletNagantBehaviour : BulletsBehaviour
+public class BulletNagant1895Behaviour : BulletsBehaviour
 {
 
     // Use this for initialization

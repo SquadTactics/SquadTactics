@@ -18,7 +18,7 @@ public class BulletP38Behaviour : BulletsBehaviour {
         transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         float distancia = Vector3.Distance(transform.position, this.origem);
         // Corrigir alcance para 4.
-        if (distancia > 10)
+        if (distancia > 4)
         {
             Destroy(this.gameObject);
         }
