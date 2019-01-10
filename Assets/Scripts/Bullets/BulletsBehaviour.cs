@@ -15,6 +15,8 @@ public abstract class BulletsBehaviour : MonoBehaviour {
 
     protected Vector3 origem;
 
+    public PlayerBehaviour alvo;
+
     // Start is called before the first frame update
     protected void Start() {
 

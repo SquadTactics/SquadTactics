@@ -25,9 +25,12 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
 
     }
 
-    public override void Atirar() {
-        if (this.capacidade > 0) {
-            if (this.disparados < this.limitesDeDisparos) {
+    public void Atirar()
+    {
+        if (this.capacidade > 0)
+        {
+            if (this.disparados < this.limitesDeDisparos)
+            {
                 Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
                 this.disparados++;
                 this.capacidade--;
@@ -38,5 +41,10 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(0);
+    }
+
+    public override void Atirar(PlayerBehaviour alvo)
+    {
+        throw new System.NotImplementedException();
     }
 }

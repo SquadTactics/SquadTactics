@@ -3,6 +3,8 @@ using System.Collections;
 
 public class BulletMp40Behaviour : BulletsBehaviour {
 
+    private float distancia;
+
     // Use this for initialization
     new void Start() {
         this.velocidade = 15;
@@ -10,20 +12,26 @@ public class BulletMp40Behaviour : BulletsBehaviour {
         this.danoPequena = 10;
         this.danoMedio = 7;
         this.danoLongo = 5;
+
+        distancia = Vector3.Distance(this.alvo.transform.position, this.origem);
+        Debug.Log(distancia);
     }
 
     // Update is called once per frame
     new void Update() {
-        transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
-        float distancia = Vector3.Distance(transform.position, this.origem);
+        //transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         if (distancia > 6)
         {
             Destroy(this.gameObject);
+        } else {
+            this.CalculaDano(distancia);
+            this.alvo.LevaDano(this.dano);
         }
+
     }
 
     private void OnCollisionEnter(UnityEngine.Collision collision) {
-        if (collision.gameObject.tag == "landser") {
+       /* if (collision.gameObject.tag == "landser") {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
             Debug.Log("Distancia a: " + collision.gameObject.GetComponent<LandserBehaviour>().transform.position);
             Debug.Log("Distancia: " + distancia);
@@ -35,7 +43,7 @@ public class BulletMp40Behaviour : BulletsBehaviour {
                 Debug.Log("Dano: " + this.dano);
                 Destroy(this.gameObject);
             }
-        }
+        }*/
     }
 
     private void CalculaDano(float distancia) {
