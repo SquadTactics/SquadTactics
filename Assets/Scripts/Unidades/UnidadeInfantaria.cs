@@ -11,7 +11,7 @@ public class UnidadeInfantaria : MonoBehaviour
     // Start is called before the first frame update
     void Start() {
         this.soldados = new List<PlayerBehaviour>();
-        this.soldados.AddRange(this.GetComponentsInChildren<LandserBehaviour>());
+        this.soldados.AddRange(this.GetComponentsInChildren<PlayerBehaviour>());
         this.destruida = false;
     }
 
