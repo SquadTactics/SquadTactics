@@ -1,13 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class LandserBehaviour : PlayerBehaviour
 {
 
+    private NavMeshAgent agente;
+    private Vector3 destino;
+
     // Start is called before the first frame update
     void Start()
     {
+        this.agente = this.GetComponent<NavMeshAgent>();
         this.vida = 100;
         this.modoAtaque = true;
         this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
@@ -16,6 +21,17 @@ public class LandserBehaviour : PlayerBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetMouseButtonDown(0)) {
+            // Disparar um raio da posição do mouse
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit)) {
+                destino = hit.point;
+                agente.SetDestination(destino);
+            }
+        }
+
         if (this.vida <= 0) {
             Destroy(this.gameObject, 1);
         }

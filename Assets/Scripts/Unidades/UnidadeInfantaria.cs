@@ -13,7 +13,6 @@ public class UnidadeInfantaria : MonoBehaviour
         this.soldados = new List<PlayerBehaviour>();
         this.soldados.AddRange(this.GetComponentsInChildren<PlayerBehaviour>());
         this.destruida = false;
-
     }
 
     // Update is called once per frame
