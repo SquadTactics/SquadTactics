@@ -19,7 +19,8 @@ public class DP28Behaviour : WeaponBehaviour {
     // Update is called once per frame
     new void Update()
     {
-        /*if (Input.GetButtonDown("Fire1")) {
+        /*if (Input.GetButtonDown("Fire1"))
+        {
             this.Atirar();
         }*/
 

@@ -31,7 +31,7 @@ public class Mp40Behaviour : WeaponBehaviour {
             }
         }*/
 
-       /* if (Input.GetButtonDown("Fire1")) {
+        /*if (Input.GetButtonDown("Fire1")) {
             this.Atirar();
         }*/
 

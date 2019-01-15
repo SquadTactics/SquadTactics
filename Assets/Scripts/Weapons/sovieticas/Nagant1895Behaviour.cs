@@ -9,13 +9,16 @@ public class Nagant1895Behaviour : WeaponBehaviour
     {
         this.podeAtirar = true;
         this.capacidade = 7;
+        this.danoPequena = 10;
+        this.danoMedio = 7.5f;
+        this.danoLongo = 5;
     }
 
     // Update is called once per frame
     new void Update()
     {
 
-        if (this.capacidade > 0)
+        if (this.capacidade <= 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
@@ -48,6 +51,30 @@ public class Nagant1895Behaviour : WeaponBehaviour
 
     public override void Atirar(PlayerBehaviour alvo)
     {
-        throw new System.NotImplementedException();
+        if (this.podeAtirar)
+        {
+            this.podeAtirar = false;
+            float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
+            this.CalculaDano(distancia);
+            alvo.LevaDano(this.dano);
+            this.capacidade--;
+            StartCoroutine(this.EsperarPraAtirar());
+        }
+    }
+
+    private void CalculaDano(float distancia)
+    {
+        if (distancia >= 2 && distancia <= 2.5)
+        {
+            this.dano = this.danoPequena;
+        }
+        else if (distancia > 2.5 && distancia <= 3.5)
+        {
+            this.dano = this.danoMedio;
+        }
+        else if (distancia > 3.5 && distancia <= 4)
+        {
+            this.dano = this.danoLongo;
+        }
     }
 }
