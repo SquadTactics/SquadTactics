@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public abstract class PlayerBehaviour : MonoBehaviour {
 
@@ -13,6 +14,9 @@ public abstract class PlayerBehaviour : MonoBehaviour {
 
     protected float _velocidade;
     protected float _girar;
+
+    protected NavMeshAgent agente;
+    protected Vector3 destino;
 
 
     // Start is called before the first frame update

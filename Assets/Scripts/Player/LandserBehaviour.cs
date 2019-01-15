@@ -6,22 +6,19 @@ using UnityEngine.AI;
 public class LandserBehaviour : PlayerBehaviour
 {
 
-    private NavMeshAgent agente;
-    private Vector3 destino;
-
     // Start is called before the first frame update
     void Start()
     {
         this.agente = this.GetComponent<NavMeshAgent>();
+        this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
         this.vida = 100;
         this.modoAtaque = true;
-        this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        // Movimentação.
         if (Input.GetMouseButtonDown(0)) {
             // Disparar um raio da posição do mouse
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
