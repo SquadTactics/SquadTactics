@@ -5,7 +5,7 @@ using UnityEngine;
 public class Nagant1895Behaviour : WeaponBehaviour
 {
     // Start is called before the first frame update
-    new void Start()
+    void Start()
     {
         this.podeAtirar = true;
         this.capacidade = 7;
@@ -15,38 +15,13 @@ public class Nagant1895Behaviour : WeaponBehaviour
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
-
         if (this.capacidade <= 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
         }
-    }
-
-    public void Atirar()
-    {
-        if (this.podeAtirar)
-        {
-            this.podeAtirar = false;
-            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-            this.capacidade--;
-            StartCoroutine(this.EsperarPraAtirar());
-        }
-    }
-
-    private IEnumerator EsperarPraAtirar()
-    {
-        int tempo = Random.Range(4, 7);
-        yield return new WaitForSeconds(tempo);
-        this.podeAtirar = true;
-    }
-
-    public override IEnumerator Recarregar()
-    {
-        yield return new WaitForSeconds(3);
-        this.podeAtirar = true;
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -60,6 +35,20 @@ public class Nagant1895Behaviour : WeaponBehaviour
             this.capacidade--;
             StartCoroutine(this.EsperarPraAtirar());
         }
+    }
+
+    public override IEnumerator Recarregar()
+    {
+        yield return new WaitForSeconds(3);
+        this.podeAtirar = true;
+        this.capacidade = 7;
+    }
+
+    private IEnumerator EsperarPraAtirar()
+    {
+        int tempo = Random.Range(4, 7);
+        yield return new WaitForSeconds(tempo);
+        this.podeAtirar = true;
     }
 
     private void CalculaDano(float distancia)

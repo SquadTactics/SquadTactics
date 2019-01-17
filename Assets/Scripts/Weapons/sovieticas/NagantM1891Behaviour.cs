@@ -4,7 +4,7 @@ using System.Collections;
 public class NagantM1891Behaviour : WeaponBehaviour
 {
     // Start is called before the first frame update
-    new void Start()
+    void Start()
     {
         this.podeAtirar = true;
         this.capacidade = 7;
@@ -14,27 +14,12 @@ public class NagantM1891Behaviour : WeaponBehaviour
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
-        /*if (Input.GetButtonDown("Fire1")) {
-            this.Atirar();
-        }*/
-
         if (this.capacidade == 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
-        }
-    }
-
-    public void Atirar()
-    {
-        if (this.podeAtirar)
-        {
-            this.podeAtirar = false;
-            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-            this.capacidade--;
-            StartCoroutine(this.EsperarPraAtirar());
         }
     }
 
@@ -62,6 +47,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
     {
         yield return new WaitForSeconds(3);
         this.podeAtirar = true;
+        this.capacidade = 7;
     }
 
     private void CalcularDano(float distancia)

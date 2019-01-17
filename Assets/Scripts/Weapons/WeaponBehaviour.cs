@@ -39,11 +39,6 @@ public abstract class WeaponBehaviour : MonoBehaviour
 
     public Transform canoDaArma;
 
-    // Start is called before the first frame update
-    protected void Start() { }
-
-    // Update is called once per frame
-    protected void Update() { }
 
     /// <summary>
     ///    Method that will treat the weapon logic of instantiating the bullet.
