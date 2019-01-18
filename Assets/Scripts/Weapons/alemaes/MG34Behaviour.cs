@@ -1,19 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class DP28Behaviour : WeaponBehaviour {
-
+public class MG34Behaviour : WeaponBehaviour
+{
     private bool modoSupressao;
 
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
         this.podeAtirar = true;
         this.modoSupressao = false;
-        this.capacidade = 45;
-        this.danoPequena = 16;
-        this.danoMedio = 12;
-        this.danoLongo = 8;
+        this.capacidade = 50;
+        this.danoPequena = 18;
+        this.danoMedio = 13.5f;
+        this.danoLongo = 9;
     }
 
     // Update is called once per frame
@@ -22,17 +23,17 @@ public class DP28Behaviour : WeaponBehaviour {
         if (this.capacidade == 0)
         {
             this.podeAtirar = false;
-            StartCoroutine(Recarregar());
+            StartCoroutine(this.Recarregar());
         }
 
         if (Input.GetButtonDown("W"))
         {
-            this.AtivarModoSupressao();
+            this.ModoSupressao();
         }
 
         if (Input.GetButtonDown("Q"))
         {
-            this.AtivarModoNormal();
+            this.ModoNormal();
         }
     }
 
@@ -43,17 +44,14 @@ public class DP28Behaviour : WeaponBehaviour {
             this.podeAtirar = false;
             if (!this.modoSupressao)
             {
-                int sorteio = (int)Random.Range(5, 7);
-                StartCoroutine(Disparar(sorteio, 1, alvo));
+                int vezes = (int)UnityEngine.Random.Range(6, 8);
+                StartCoroutine(Disparar(alvo, vezes, 1));
             }
-            else
-            {
-                StartCoroutine(Disparar(45, 6, alvo));
-            }
+
         }
     }
 
-    private IEnumerator Disparar(int vezes, int tempoPraVoltarAtirar, PlayerBehaviour alvo)
+    private IEnumerator Disparar(PlayerBehaviour alvo, int vezes, int tempo)
     {
         for (int i = 0; i < vezes; i++)
         {
@@ -66,38 +64,39 @@ public class DP28Behaviour : WeaponBehaviour {
                 yield return new WaitForSeconds(0.2f);
             }
         }
-        yield return new WaitForSeconds(tempoPraVoltarAtirar);
+        yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
+
     }
 
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
-        this.capacidade = 45;
         this.podeAtirar = true;
+        this.capacidade = 50;
     }
 
-    public void AtivarModoSupressao()
+    private void ModoSupressao()
     {
         this.modoSupressao = true;
     }
 
-    public void AtivarModoNormal()
+    private void ModoNormal()
     {
         this.modoSupressao = false;
     }
 
     private void CalcularDano(float distancia)
     {
-        if (distancia >= 2 && distancia <= 4)
+        if (distancia >= 2 && distancia <= 5)
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 4 && distancia <= 8)
+        else if (distancia > 5 && distancia <= 8.5)
         {
             this.dano = this.danoMedio;
         }
-        else if (distancia > 8 && distancia <= 12)
+        else if (distancia > 8.5 && distancia <= 12)
         {
             this.dano = this.danoLongo;
         }

@@ -1,42 +1,71 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 public class NagantM1891ScopedBehaviour : WeaponBehaviour
 {
-    private float shootAgain;
 
     // Use this for initialization
-    new void Start() {
-        this.limitesDeDisparos = 1;
-        this.shootAgain = 7;
+    void Start()
+    {
+        this.podeAtirar = true;
         this.capacidade = 5;
+        this.danoPequena = 30;
+        this.danoMedio = 22.5f;
+        this.danoLongo = 15;
     }
 
     // Update is called once per frame
-    new void Update() {
-
-        if (this.disparados >= this.limitesDeDisparos) {
-            this.velocidade += Time.deltaTime;
-            if (this.velocidade >= this.shootAgain) {
-                this.disparados = 0;
-                this.velocidade = 0;
-            }
+    void Update()
+    {
+        if (this.capacidade == 0)
+        {
+            this.podeAtirar = false;
+            StartCoroutine(this.Recarregar());
         }
 
     }
 
-    public override void Atirar() {
-        if (this.capacidade > 0) {
-            if (this.disparados < this.limitesDeDisparos) {
-                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-                this.disparados++;
-                this.capacidade--;
-            }
+    public override void Atirar(PlayerBehaviour alvo)
+    {
+        if (this.podeAtirar)
+        {
+            this.podeAtirar = false;
+            int tempo = UnityEngine.Random.Range(6, 8);
+            StartCoroutine(Disparar(alvo, tempo));
         }
+    }
+
+    private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
+    {
+        float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
+        this.CalculaDano(distancia);
+        alvo.LevaDano(this.dano);
+        this.capacidade--;
+        yield return new WaitForSeconds(tempo);
+        this.podeAtirar = true;
     }
 
     public override IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(3);
+        this.podeAtirar = true;
+        this.capacidade = 5;
+    }
+
+    private void CalculaDano(float distancia)
+    {
+        if (distancia >= 2 && distancia <= 6)
+        {
+            this.dano = this.danoPequena;
+        }
+        else if (distancia > 6 && distancia <= 10)
+        {
+            this.dano = this.danoMedio;
+        }
+        else if (distancia > 10 && distancia <= 14)
+        {
+            this.dano = this.danoLongo;
+        }
     }
 }

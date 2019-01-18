@@ -5,17 +5,23 @@ using UnityEngine;
 /**
  * 
  */
-public abstract class WeaponBehaviour : MonoBehaviour {
+public abstract class WeaponBehaviour : MonoBehaviour
+{
 
     // Bullet.
     public BulletsBehaviour projetil;
+
+    protected float danoPequena;
+    protected float danoMedio;
+    protected float danoLongo;
+    protected float dano;
 
     // Speed that the gun can re-shoot.
     protected float velocidade;
 
     // Shots fired before velocity was reached.
     protected int disparados;
-    
+
     // Total allowed shots and then wait a while to re-shoot.
     protected int limitesDeDisparos;
 
@@ -33,20 +39,11 @@ public abstract class WeaponBehaviour : MonoBehaviour {
 
     public Transform canoDaArma;
 
-    // Start is called before the first frame update
-    protected void Start() {
 
-    }
-
-    // Update is called once per frame
-    protected void Update() {
-        
-    }
-
-     /// <summary>
-     ///    Method that will treat the weapon logic of instantiating the bullet.
-     /// </summary>
-    public abstract void Atirar();
+    /// <summary>
+    ///    Method that will treat the weapon logic of instantiating the bullet.
+    /// </summary>
+    public abstract void Atirar(PlayerBehaviour alvo);
 
     /// <summary>
     ///     Method that deals with the logic of reloading the weapon.

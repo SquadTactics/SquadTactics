@@ -1,16 +1,18 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class NagantM1891Behaviour : WeaponBehaviour
+public class Kar98KBehaviour : WeaponBehaviour
 {
-    // Start is called before the first frame update
+
+    // Use this for initialization
     void Start()
     {
         this.podeAtirar = true;
-        this.capacidade = 7;
-        this.danoPequena = 22;
-        this.danoMedio = 16.5f;
-        this.danoLongo = 11;
+        this.capacidade = 5;
+        this.danoPequena = 25;
+        this.danoMedio = 18.75f;
+        this.danoLongo = 12.5f;
     }
 
     // Update is called once per frame
@@ -28,17 +30,17 @@ public class NagantM1891Behaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
-            this.CalcularDano(distancia);
-            alvo.LevaDano(this.dano);
-            this.capacidade--;
-            StartCoroutine(this.EsperarPraAtirar());
+            int tempo = (int)UnityEngine.Random.Range(4, 6);
+            StartCoroutine(Disparar(alvo, tempo));
         }
     }
 
-    private IEnumerator EsperarPraAtirar()
+    private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
     {
-        int tempo = Random.Range(4, 7);
+        float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
+        this.CalcularDano(distancia);
+        alvo.LevaDano(this.dano);
+        this.capacidade--;
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }
@@ -46,17 +48,17 @@ public class NagantM1891Behaviour : WeaponBehaviour
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
+        this.capacidade = 5;
         this.podeAtirar = true;
-        this.capacidade = 7;
     }
 
     private void CalcularDano(float distancia)
     {
-        if (distancia >= 2 && distancia <= 4)
+        if (distancia >= 2 && distancia <= 4.5)
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 4 && distancia <= 7)
+        else if (distancia > 4.5 && distancia <= 7)
         {
             this.dano = this.danoMedio;
         }
