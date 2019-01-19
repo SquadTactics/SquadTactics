@@ -50,4 +50,16 @@ public class LandserBehaviour : PlayerBehaviour
     public override void LevaDano(float dano) {
         this.vida -= dano;
     }
+
+    public override void Movimentar(Vector3 position)
+    {
+        // Disparar um raio da posição do mouse
+        Ray ray = Camera.main.ScreenPointToRay(position);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit))
+        {
+            destino = hit.point;
+            agente.SetDestination(destino);
+        }
+    }
 }
