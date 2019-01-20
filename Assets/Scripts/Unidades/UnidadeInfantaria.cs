@@ -46,17 +46,22 @@ public class UnidadeInfantaria : MonoBehaviour
 
     private IEnumerator Mover(Vector3 pos)
     {
-        Vector3 aux = new Vector3(pos.x, pos.y, pos.z);
+        Vector3 aux = new Vector3(pos.x, pos.y - 50, pos.z);
 
-        float i = 40;
+        float i = 50;
+        int cont = 1;
         foreach (PlayerBehaviour soldado in this.GetSoldados())
         {
-            // Fazer movimentação quando o player está atrás dos outros
-            // Na formação: * *
-            //              * * 
-            // Ao se movimentar devem continuar nessa formação.
-            soldado.Movimentar(pos);
-            pos.x += i;
+            if (cont <= 2)
+            {
+                soldado.Movimentar(pos);
+                pos.x += i;
+            } else
+            {
+                soldado.Movimentar(aux);
+                aux.x += i;
+            }
+            cont++;
             yield return new WaitForSeconds(1);
         }
     }
