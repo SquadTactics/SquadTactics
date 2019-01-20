@@ -43,4 +43,28 @@ public class CombateBehaviour : MonoBehaviour
             }
         }
     }
+
+    public static void EscolheAlvos(UnidadeInfantaria unidade1, UnidadeInfantaria unidade2)
+    {
+        int i = 0;
+        Debug.Log(unidade2.GetSoldados());
+        foreach (PlayerBehaviour s1 in unidade1.GetSoldados())
+        {
+            int j = 0;
+            foreach (PlayerBehaviour s2 in unidade2.GetSoldados())
+            {
+                if (i == j)
+                {
+                    s1.SetAlvo(s2);
+                    s2.SetAlvo(s1);
+                    i++;
+                    break;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+        }
+    }
 }

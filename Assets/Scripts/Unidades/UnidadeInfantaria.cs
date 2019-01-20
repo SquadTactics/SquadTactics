@@ -46,24 +46,42 @@ public class UnidadeInfantaria : MonoBehaviour
 
     private IEnumerator Mover(Vector3 pos)
     {
-        Vector3 aux = new Vector3(pos.x, pos.y - 50, pos.z);
-
-        float i = 50;
-        int cont = 1;
-        foreach (PlayerBehaviour soldado in this.GetSoldados())
+        if (!this.VerificarColisao(pos))
         {
-            if (cont <= 2)
+            Vector3 aux = new Vector3(pos.x, pos.y - 50, pos.z);
+
+            float i = 50;
+            int cont = 1;
+            foreach (PlayerBehaviour soldado in this.GetSoldados())
             {
-                soldado.Movimentar(pos);
-                pos.x += i;
-            } else
-            {
-                soldado.Movimentar(aux);
-                aux.x += i;
+                if (cont <= 2)
+                {
+                    soldado.Movimentar(pos);
+                    pos.x += i;
+                }
+                else
+                {
+                    soldado.Movimentar(aux);
+                    aux.x += i;
+                }
+                cont++;
+                yield return new WaitForSeconds(1);
             }
-            cont++;
-            yield return new WaitForSeconds(1);
         }
+    }
+
+    private bool VerificarColisao(Vector3 pos)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(pos), out hit))
+        {
+            if (hit.collider.CompareTag("Unidade"))
+            {
+                CombateBehaviour.EscolheAlvos(this, hit.collider.gameObject.GetComponent<UnidadeInfantaria>());
+                return true;
+            }
+        }
+        return false;
     }
 
     private void Verifica()
