@@ -19,7 +19,7 @@ public class LandserBehaviour : PlayerBehaviour
     void Update()
     {
         // Movimentação.
-        /*if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) {
             // Disparar um raio da posição do mouse
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -27,7 +27,7 @@ public class LandserBehaviour : PlayerBehaviour
                 destino = hit.point;
                 agente.SetDestination(destino);
             }
-        }*/
+        }
 
         if (this.vida <= 0) {
             Destroy(this.gameObject, 1);
