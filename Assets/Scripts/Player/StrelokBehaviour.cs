@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
-public class LandserBehaviour : PlayerBehaviour
+public class StrelokBehaviour : PlayerBehaviour
 {
 
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
         this.agente = this.GetComponent<NavMeshAgent>();
@@ -18,28 +17,22 @@ public class LandserBehaviour : PlayerBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Movimentação.
-        /*if (Input.GetMouseButtonDown(0)) {
-            // Disparar um raio da posição do mouse
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
-                destino = hit.point;
-                agente.SetDestination(destino);
-            }
-        }*/
-
-        if (this.vida <= 0) {
+        if (this.vida <= 0)
+        {
             Destroy(this.gameObject, 1);
         }
 
-        if (this.alvo != null) {
+        if (this.alvo != null)
+        {
             this.modoAtaque = true;
-        } else {
+        }
+        else
+        {
             this.modoAtaque = false;
         }
 
-        if (this.modoAtaque) {
+        if (this.modoAtaque)
+        {
             if (!(this.alvo.GetVida() <= 0))
             {
                 weapon.Atirar(this.alvo);
@@ -47,7 +40,8 @@ public class LandserBehaviour : PlayerBehaviour
         }
     }
 
-    public override void LevaDano(float dano) {
+    public override void LevaDano(float dano)
+    {
         this.vida -= dano;
     }
 

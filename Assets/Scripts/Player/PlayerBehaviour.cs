@@ -40,4 +40,6 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     {
         return this.vida;
     }
+
+    public abstract void Movimentar(Vector3 position);
 }
