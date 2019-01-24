@@ -387,7 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387969afa63339443b627fbdf413003b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projetil: {fileID: 0}
+  projetil: {fileID: 1623759247501868780, guid: b7b771cf43b1e384d892299a9b1a7a00,
+    type: 3}
   canoDaArma: {fileID: 73323074461853557}
 --- !u!1 &8595490902338587922
 GameObject:
