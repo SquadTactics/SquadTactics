@@ -42,4 +42,6 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     }
 
     public abstract void Movimentar(Vector3 position);
+
+    public abstract void Rotacionar(Vector3 position);
 }

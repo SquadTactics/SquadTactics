@@ -5,12 +5,16 @@ using UnityEngine.AI;
 
 public class LandserBehaviour : PlayerBehaviour
 {
+    public Camera cam;
+    private Quaternion tr;
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         this.agente = this.GetComponent<NavMeshAgent>();
         this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
+        this.rb = this.GetComponent<Rigidbody>();
         this.vida = 100;
         this.modoAtaque = true;
     }
@@ -18,16 +22,7 @@ public class LandserBehaviour : PlayerBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Movimentação.
-        /*if (Input.GetMouseButtonDown(0)) {
-            // Disparar um raio da posição do mouse
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray, out hit)) {
-                destino = hit.point;
-                agente.SetDestination(destino);
-            }
-        }*/
+        //this.Control();
 
         if (this.vida <= 0) {
             Destroy(this.gameObject, 1);
@@ -47,19 +42,47 @@ public class LandserBehaviour : PlayerBehaviour
         }
     }
 
+    public void Control()
+    {
+        // Rotação.
+        if (Input.GetMouseButtonDown(1))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            this.Rotacionar(mousePos);
+        }
+
+        // Movimentar.
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector3 mousePos = Input.mousePosition;
+            this.Movimentar(mousePos);
+        }
+    }
+
     public override void LevaDano(float dano) {
         this.vida -= dano;
     }
 
     public override void Movimentar(Vector3 position)
     {
-        // Disparar um raio da posição do mouse
         Ray ray = Camera.main.ScreenPointToRay(position);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
             destino = hit.point;
             agente.SetDestination(destino);
+        }
+    }
+
+    public override void Rotacionar(Vector3 position)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(position), out hit, 100))
+        {
+            Vector3 p = hit.point - transform.position;
+            p.y = 0;
+            Quaternion newR = Quaternion.LookRotation(p);
+            this.transform.rotation = newR;
         }
     }
 }

@@ -56,4 +56,9 @@ public class StrelokBehaviour : PlayerBehaviour
             agente.SetDestination(destino);
         }
     }
+
+    public override void Rotacionar(Vector3 position)
+    {
+        throw new System.NotImplementedException();
+    }
 }

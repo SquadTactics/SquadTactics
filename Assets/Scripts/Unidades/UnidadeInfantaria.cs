@@ -36,6 +36,18 @@ public class UnidadeInfantaria : MonoBehaviour
                 StartCoroutine(this.Mover(Input.mousePosition));
             }
         }
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (this.selecionada)
+            {
+                this.selecionada = false;
+                foreach (var soldado in this.soldados)
+                {
+                    soldado.Rotacionar(Input.mousePosition);
+                }
+
+            }
+        }
 
         if (this.destruida) {
             Destroy(this.gameObject);
@@ -48,6 +60,7 @@ public class UnidadeInfantaria : MonoBehaviour
     {
         if (!this.VerificarColisao(pos))
         {
+            Debug.Log("OKOK");
             Vector3 aux = new Vector3(pos.x, pos.y - 50, pos.z);
 
             float i = 50;
