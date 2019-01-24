@@ -464,5 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77810f46e67e8ca4695e6fd297d34985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 2018490473566303884, guid: eb9320a4c24d6dd46abd0854eff41d18, type: 3}
-  gunBarrel: {fileID: 343924005}
+  projetil: {fileID: 2018490473566303884, guid: eb9320a4c24d6dd46abd0854eff41d18,
+    type: 3}
+  canoDaArma: {fileID: 343924005}

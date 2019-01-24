@@ -38,9 +38,7 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
 
     private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
     {
-        float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
-        this.CalculaDano(distancia);
-        alvo.LevaDano(this.dano);
+        Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
         this.capacidade--;
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;

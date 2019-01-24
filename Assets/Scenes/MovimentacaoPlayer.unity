@@ -397,6 +397,75 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!1001 &241169445
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 847876621}
+    m_Modifications:
+    - target: {fileID: 7258775735606261875, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_Name
+      value: Mosin_Nagant_1891.30_Scoped_ST
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f11f1a9d409961c4c91f78a45113fc33, type: 3}
 --- !u!1001 &451250987
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -409,6 +478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nagant M1895_ST
       objectReference: {fileID: 0}
+    - target: {fileID: 410477832055160411, guid: 0d52eba5fd3544b4594b6db78836201f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4970439503991668348, guid: 0d52eba5fd3544b4594b6db78836201f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -417,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 4970439503991668348, guid: 0d52eba5fd3544b4594b6db78836201f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4970439503991668348, guid: 0d52eba5fd3544b4594b6db78836201f,
         type: 3}
@@ -479,7 +553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 312190362, guid: 8761a38b5bbdbf3488a4dcb2a9da6751, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 312190362, guid: 8761a38b5bbdbf3488a4dcb2a9da6751, type: 3}
       propertyPath: m_LocalPosition.y
@@ -939,6 +1013,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 312190362, guid: 8761a38b5bbdbf3488a4dcb2a9da6751, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 387212511275867244, guid: 8761a38b5bbdbf3488a4dcb2a9da6751,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3647789709105386560, guid: 8761a38b5bbdbf3488a4dcb2a9da6751,

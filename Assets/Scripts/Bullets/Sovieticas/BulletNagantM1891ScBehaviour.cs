@@ -6,13 +6,49 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour
 
     // Use this for initialization
     new void Start() {
-        this.tempoDeVida = 5;
-        this.velocidade = 1;
-        Destroy(this.gameObject, this.tempoDeVida);
+        this.origem = this.transform.position;
+        this.velocidade = 15;
+        this.danoPequena = 30;
+        this.danoMedio = 22.5f;
+        this.danoLongo = 15;
     }
 
     // Update is called once per frame
     new void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
+        distancia = Vector3.Distance(this.transform.position, this.origem);
+        if (distancia > 14)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(UnityEngine.Collision collision)
+    {
+        if (collision.gameObject.tag == "landser")
+        {
+            float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
+            Debug.Log("Distancia: " + distancia);
+            this.CalcularDano(distancia);
+            collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
+            Debug.Log("Dano: " + this.dano);
+            Destroy(this.gameObject);
+        }
+    }
+
+    private void CalcularDano(float distancia)
+    {
+        if (distancia >= 2 && distancia <= 6)
+        {
+            this.dano = this.danoPequena;
+        }
+        else if (distancia > 6 && distancia <= 10)
+        {
+            this.dano = this.danoMedio;
+        }
+        else if (distancia > 10 && distancia <= 14)
+        {
+            this.dano = this.danoLongo;
+        }
     }
 }

@@ -29,14 +29,14 @@ public class BulletMp40Behaviour : BulletsBehaviour {
         {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
             Debug.Log("Distancia: " + distancia);
-            this.CalculaDano(distancia);
+            this.CalcularDano(distancia);
             collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
             Debug.Log("Dano: " + this.dano);
             Destroy(this.gameObject);
         }
     }
 
-    private void CalculaDano(float distancia) {
+    private void CalcularDano(float distancia) {
         if (distancia >= 2 && distancia <= 3) {
             this.dano = this.danoPequena;
         } else if (distancia > 3 && distancia <= 5) {
