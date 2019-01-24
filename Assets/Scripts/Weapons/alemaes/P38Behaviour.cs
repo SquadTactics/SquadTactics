@@ -4,7 +4,6 @@ using System.Collections;
 
 public class P38Behaviour : WeaponBehaviour {
 
-
     // Use this for initialization
     void Start()
     {
@@ -48,16 +47,5 @@ public class P38Behaviour : WeaponBehaviour {
         yield return new WaitForSeconds(3);
         this.capacidade = 8;
         this.podeAtirar = true;
-    }
-
-    private void CalculaDano(float distancia)
-    {
-        if (distancia >= 2 && distancia < 3) {
-            this.dano = this.danoPequena;
-        } else if (distancia >= 3 && distancia <= 3.5f) {
-            this.dano = this.danoMedio;
-        } else if (distancia > 3.5f && distancia <= 4) {
-            this.dano = this.danoLongo;
-        }
     }
 }

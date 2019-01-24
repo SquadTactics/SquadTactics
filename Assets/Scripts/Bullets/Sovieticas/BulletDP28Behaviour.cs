@@ -5,7 +5,7 @@ using System;
 public class BulletDP28Behaviour : BulletsBehaviour {
 
     // Use this for initialization
-    new void Start()
+    void Start()
     {
         this.origem = this.transform.position;
         this.velocidade = 15;
@@ -15,7 +15,7 @@ public class BulletDP28Behaviour : BulletsBehaviour {
     }
 
     // Update is called once per frame
-    new void Update() {
+    void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         float distancia = Vector3.Distance(this.transform.position, this.origem);
         if (distancia > 12) {
@@ -34,7 +34,7 @@ public class BulletDP28Behaviour : BulletsBehaviour {
         }
     }
 
-    private void CalcularDano(float distancia) {
+    protected override void CalcularDano(float distancia) {
         if (distancia >= 2 && distancia <= 4) {
             this.dano = this.danoPequena;
         } else if (distancia > 4 && distancia <= 8) {

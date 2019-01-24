@@ -83,20 +83,4 @@ public class MG34Behaviour : WeaponBehaviour
     {
         this.modoSupressao = false;
     }
-
-    private void CalcularDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 5)
-        {
-            this.dano = this.danoPequena;
-        }
-        else if (distancia > 5 && distancia <= 8.5)
-        {
-            this.dano = this.danoMedio;
-        }
-        else if (distancia > 8.5 && distancia <= 12)
-        {
-            this.dano = this.danoLongo;
-        }
-    }
 }

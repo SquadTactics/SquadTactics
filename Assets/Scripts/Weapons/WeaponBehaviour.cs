@@ -10,6 +10,7 @@ public abstract class WeaponBehaviour : MonoBehaviour
 
     // Bullet.
     public BulletsBehaviour projetil;
+    public Transform canoDaArma;
 
     protected float danoPequena;
     protected float danoMedio;
@@ -18,12 +19,6 @@ public abstract class WeaponBehaviour : MonoBehaviour
 
     // Speed that the gun can re-shoot.
     protected float velocidade;
-
-    // Shots fired before velocity was reached.
-    protected int disparados;
-
-    // Total allowed shots and then wait a while to re-shoot.
-    protected int limitesDeDisparos;
 
     // Capacity of weapon.
     protected int capacidade;
@@ -36,10 +31,7 @@ public abstract class WeaponBehaviour : MonoBehaviour
 
     // Verifica se a arma pode disparar.
     protected bool podeAtirar;
-
-    public Transform canoDaArma;
-
-
+    
     /// <summary>
     ///    Method that will treat the weapon logic of instantiating the bullet.
     /// </summary>

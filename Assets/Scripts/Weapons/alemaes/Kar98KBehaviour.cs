@@ -49,20 +49,4 @@ public class Kar98KBehaviour : WeaponBehaviour
         this.capacidade = 5;
         this.podeAtirar = true;
     }
-
-    private void CalcularDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 4.5)
-        {
-            this.dano = this.danoPequena;
-        }
-        else if (distancia > 4.5 && distancia <= 7)
-        {
-            this.dano = this.danoMedio;
-        }
-        else if (distancia > 7 && distancia <= 10)
-        {
-            this.dano = this.danoLongo;
-        }
-    }
 }

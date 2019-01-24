@@ -48,20 +48,4 @@ public class Nagant1895Behaviour : WeaponBehaviour
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }
-
-    private void CalculaDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 2.5)
-        {
-            this.dano = this.danoPequena;
-        }
-        else if (distancia > 2.5 && distancia <= 3.5)
-        {
-            this.dano = this.danoMedio;
-        }
-        else if (distancia > 3.5 && distancia <= 4)
-        {
-            this.dano = this.danoLongo;
-        }
-    }
 }

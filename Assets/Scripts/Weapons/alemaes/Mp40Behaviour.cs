@@ -82,15 +82,4 @@ public class Mp40Behaviour : WeaponBehaviour {
     public void AtivarModoNormal() {
         this.modoFull = false;
     }
-
-    private void CalculaDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 3) {
-            this.dano = this.danoPequena;
-        } else if (distancia > 3 && distancia <= 5) {
-            this.dano = this.danoMedio;
-        } else if (distancia > 5 && distancia <= 6) {
-            this.dano = this.danoLongo;
-        }
-    }
 }

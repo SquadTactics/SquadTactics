@@ -5,7 +5,8 @@ using System;
 public class BulletMp40Behaviour : BulletsBehaviour {
 
     // Use this for initialization
-    new void Start() {
+    void Start()
+    {
         this.velocidade = 15;
         this.origem = this.transform.position;
         this.danoPequena = 10;
@@ -14,7 +15,7 @@ public class BulletMp40Behaviour : BulletsBehaviour {
     }
 
     // Update is called once per frame
-    new void Update() {
+    void Update() {
         transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
         if (distancia > 6)
@@ -36,7 +37,7 @@ public class BulletMp40Behaviour : BulletsBehaviour {
         }
     }
 
-    private void CalcularDano(float distancia) {
+    protected override void CalcularDano(float distancia) {
         if (distancia >= 2 && distancia <= 3) {
             this.dano = this.danoPequena;
         } else if (distancia > 3 && distancia <= 5) {

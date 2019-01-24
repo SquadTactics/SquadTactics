@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletNagantM1891ScBehaviour : BulletsBehaviour
-{
+public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
 
     // Use this for initialization
-    new void Start() {
+    void Start() {
         this.origem = this.transform.position;
         this.velocidade = 15;
         this.danoPequena = 30;
@@ -14,7 +13,7 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour
     }
 
     // Update is called once per frame
-    new void Update() {
+    void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
         if (distancia > 14)
@@ -36,7 +35,7 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour
         }
     }
 
-    private void CalcularDano(float distancia)
+    protected override void CalcularDano(float distancia)
     {
         if (distancia >= 2 && distancia <= 6)
         {

@@ -84,20 +84,4 @@ public class DP28Behaviour : WeaponBehaviour {
     {
         this.modoSupressao = false;
     }
-
-    private void CalcularDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 4)
-        {
-            this.dano = this.danoPequena;
-        }
-        else if (distancia > 4 && distancia <= 8)
-        {
-            this.dano = this.danoMedio;
-        }
-        else if (distancia > 8 && distancia <= 12)
-        {
-            this.dano = this.danoLongo;
-        }
-    }
 }

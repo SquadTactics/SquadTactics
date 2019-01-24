@@ -47,20 +47,4 @@ public class NagantM1891Behaviour : WeaponBehaviour
         this.podeAtirar = true;
         this.capacidade = 7;
     }
-
-    private void CalcularDano(float distancia)
-    {
-        if (distancia >= 2 && distancia <= 4)
-        {
-            this.dano = this.danoPequena;
-        }
-        else if (distancia > 4 && distancia <= 7)
-        {
-            this.dano = this.danoMedio;
-        }
-        else if (distancia > 7 && distancia <= 10)
-        {
-            this.dano = this.danoLongo;
-        }
-    }
 }

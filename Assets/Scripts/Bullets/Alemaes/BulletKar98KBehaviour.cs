@@ -4,7 +4,7 @@ using System.Collections;
 public class BulletKar98KBehaviour : BulletsBehaviour {
 
     // Use this for initialization
-    new void Start()
+    void Start()
     {
         this.velocidade = 15;
         this.origem = this.transform.position;
@@ -14,7 +14,7 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
     }
 
     // Update is called once per frame
-    new void Update()
+    void Update()
     {
         transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
@@ -37,7 +37,7 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
         }
     }
 
-    private void CalcularDano(float distancia)
+    protected override void CalcularDano(float distancia)
     {
         if (distancia >= 2 && distancia <= 4.5)
         {
