@@ -14,9 +14,7 @@ public class UnidadeInfantaria : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        this.soldados = new List<PlayerBehaviour>();
-        this.agente = this.GetComponent<NavMeshAgent>();
-        this.soldados.AddRange(this.GetComponentsInChildren<PlayerBehaviour>());
+        this.GetComponents();
         this.destruida = false;
         this.selecionada = false;
     }
@@ -115,5 +113,12 @@ public class UnidadeInfantaria : MonoBehaviour
 
     public List<PlayerBehaviour> GetSoldados() {
         return this.soldados;
+    }
+
+    public void GetComponents()
+    {
+        this.soldados = new List<PlayerBehaviour>();
+        this.agente = this.GetComponent<NavMeshAgent>();
+        this.soldados.AddRange(this.GetComponentsInChildren<PlayerBehaviour>());
     }
 }

@@ -29,6 +29,7 @@ public class LandserBehaviour : PlayerBehaviour
         }
 
         if (this.alvo != null) {
+            this.transform.LookAt(this.alvo.transform);
             this.modoAtaque = true;
         } else {
             this.modoAtaque = false;

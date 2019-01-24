@@ -12,6 +12,7 @@ public class P38Behaviour : WeaponBehaviour {
         this.danoPequena = 12;
         this.danoMedio = 9;
         this.danoLongo = 6;
+        this.podeAtirar = true;
     }
 
     // Update is called once per frame
@@ -26,11 +27,9 @@ public class P38Behaviour : WeaponBehaviour {
 
     public override void Atirar(PlayerBehaviour alvo)
     {
-        float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
         if (this.podeAtirar) {
             this.podeAtirar = false;
-            this.CalculaDano(distancia);
-            alvo.LevaDano(this.dano);
+            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
             this.capacidade--;
             StartCoroutine(EsperarPraAtirar());
         }

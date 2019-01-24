@@ -60,9 +60,7 @@ public class Mp40Behaviour : WeaponBehaviour {
         {
             if (this.capacidade > 0)
             {
-                float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
-                this.CalculaDano(distancia);
-                alvo.LevaDano(this.dano);
+                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
             }

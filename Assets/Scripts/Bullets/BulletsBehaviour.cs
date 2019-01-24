@@ -10,6 +10,7 @@ public abstract class BulletsBehaviour : MonoBehaviour {
     protected float danoPequena;
     protected float danoMedio;
     protected float danoLongo;
+    protected float distancia;
 
     protected float dano;
 
