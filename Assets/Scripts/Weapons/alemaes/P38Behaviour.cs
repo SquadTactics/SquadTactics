@@ -39,7 +39,6 @@ public class P38Behaviour : WeaponBehaviour {
         int tempo = (int)Random.Range(3, 5);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
-        this.disparados = 0;
     }
 
     public override IEnumerator Recarregar()
