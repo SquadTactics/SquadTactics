@@ -17,22 +17,21 @@ public class BulletNagantM1891Behaviour : BulletsBehaviour
     // Update is called once per frame
     new void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
-        float distancia = Vector3.Distance(this.transform.position, this.origem);
+        distancia = Vector3.Distance(this.transform.position, this.origem);
         if (distancia > 10) {
             Destroy(this.gameObject);
         }
     }
 
     private void OnCollisionEnter(UnityEngine.Collision collision) {
-        if (collision.gameObject.tag == "landser") {
+        if (collision.gameObject.tag == "landser")
+        {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
+            Debug.Log("Distancia: " + distancia);
             this.CalcularDano(distancia);
-            if (distancia > 10) {
-                Destroy(this.gameObject);
-            } else {
-                collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
-                Destroy(this.gameObject);
-            }
+            collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
+            Debug.Log("Dano: " + this.dano);
+            Destroy(this.gameObject);
         }
     }
 
