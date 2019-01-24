@@ -29,9 +29,7 @@ public class Nagant1895Behaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            float distancia = Vector3.Distance(alvo.transform.position, this.canoDaArma.transform.position);
-            this.CalculaDano(distancia);
-            alvo.LevaDano(this.dano);
+            Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
             this.capacidade--;
             StartCoroutine(this.EsperarPraAtirar());
         }
