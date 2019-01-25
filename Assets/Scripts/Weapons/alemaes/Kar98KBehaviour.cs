@@ -30,8 +30,15 @@ public class Kar98KBehaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            int tempo = (int)UnityEngine.Random.Range(4, 6);
-            StartCoroutine(Disparar(alvo, tempo));
+            float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
+            if (distancia > 10)
+            {
+                return;
+            } else
+            {
+                int tempo = (int)UnityEngine.Random.Range(4, 6);
+                StartCoroutine(Disparar(alvo, tempo));
+            }
         }
     }
 

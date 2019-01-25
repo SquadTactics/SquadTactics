@@ -25,11 +25,11 @@ public class BulletNagantM1891Behaviour : BulletsBehaviour {
     private void OnCollisionEnter(UnityEngine.Collision collision) {
         if (collision.gameObject.tag == "landser")
         {
-            float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
-            Debug.Log("Distancia: " + distancia);
+            float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
+            //Debug.Log("Distancia: " + distancia);
             this.CalcularDano(distancia);
-            collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
-            Debug.Log("Dano: " + this.dano);
+            collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);
+            //Debug.Log("Dano: " + this.dano);
             Destroy(this.gameObject);
         }
     }

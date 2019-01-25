@@ -6,15 +6,12 @@ using UnityEngine.AI;
 public class LandserBehaviour : PlayerBehaviour
 {
     public Camera cam;
-    private Quaternion tr;
-    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         this.agente = this.GetComponent<NavMeshAgent>();
         this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
-        this.rb = this.GetComponent<Rigidbody>();
         this.vida = 100;
         this.modoAtaque = true;
     }

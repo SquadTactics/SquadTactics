@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8291236419154338026}
   - component: {fileID: 899920362}
   - component: {fileID: 790193200}
-  - component: {fileID: 847876617}
   m_Layer: 0
   m_Name: landser
   m_TagString: landser
@@ -97,22 +96,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!54 &847876617
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404344726}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1919460346
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,6 +499,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MG34_ST
       objectReference: {fileID: 0}
+    - target: {fileID: 2552492081225863215, guid: 35429c12c990dd84ca240c10e0c684f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1020992563463044079, guid: 35429c12c990dd84ca240c10e0c684f2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -590,11 +578,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Kar98K_ST
-      objectReference: {fileID: 0}
-    - target: {fileID: 5885421013001978997, guid: d147396526a027e4d9867e8692a3ef93,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 136976317754354747, guid: d147396526a027e4d9867e8692a3ef93,
         type: 3}
