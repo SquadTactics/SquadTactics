@@ -6,15 +6,15 @@ using UnityEngine.AI;
 
 public abstract class PlayerBehaviour : MonoBehaviour {
 
+    [Header("Ataque")]
     public WeaponBehaviour weapon;
-
-    public float vida;
     public PlayerBehaviour alvo;
-    public bool modoAtaque;
 
-    protected float _velocidade;
-    protected float _girar;
+    [Header("Status")]
+    protected float vida;
+    protected bool modoAtaque;
 
+    [Header("Movimentação")]
     protected NavMeshAgent agente;
     protected Vector3 destino;
 

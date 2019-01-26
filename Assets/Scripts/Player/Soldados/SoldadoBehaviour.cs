@@ -1,34 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.AI;
 
-public class LandserBehaviour : PlayerBehaviour
+public abstract class SoldadoBehaviour : PlayerBehaviour
 {
-    public Camera cam;
 
-    // Start is called before the first frame update
+    // Use this for initialization
     void Start()
     {
-        this.agente = this.GetComponent<NavMeshAgent>();
-        this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
-        this.vida = 100;
-        this.modoAtaque = true;
+        this.GetComponents();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //this.Control();
-
-        if (this.vida <= 0) {
+        if (this.GetVida() <= 0)
+        {
             Destroy(this.gameObject, 1);
         }
 
-        if (this.alvo != null) {
+        if (this.alvo != null)
+        {
             this.transform.LookAt(this.alvo.transform);
             this.modoAtaque = true;
-        } else {
+        } else
+        {
             this.modoAtaque = false;
         }
 
@@ -40,27 +36,6 @@ public class LandserBehaviour : PlayerBehaviour
                 weapon.Atirar(this.alvo);
             }
         }
-    }
-
-    public void Control()
-    {
-        // Rotação.
-        if (Input.GetMouseButtonDown(1))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            this.Rotacionar(mousePos);
-        }
-
-        // Movimentar.
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector3 mousePos = Input.mousePosition;
-            this.Movimentar(mousePos);
-        }
-    }
-
-    public override void LevaDano(float dano) {
-        this.vida -= dano;
     }
 
     public override void Movimentar(Vector3 position)
@@ -84,5 +59,17 @@ public class LandserBehaviour : PlayerBehaviour
             Quaternion newR = Quaternion.LookRotation(p);
             this.transform.rotation = newR;
         }
+    }
+
+    public override void LevaDano(float dano)
+    {
+        this.vida -= dano;
+    }
+
+    private void GetComponents()
+    {
+        this.agente = this.GetComponent<NavMeshAgent>();
+        this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
+        this.vida = 100;
     }
 }

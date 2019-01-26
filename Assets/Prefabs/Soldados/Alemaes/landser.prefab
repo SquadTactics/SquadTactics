@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 312190362}
-  - component: {fileID: 8291236419154338026}
   - component: {fileID: 899920362}
   - component: {fileID: 790193200}
+  - component: {fileID: 1754194953}
   m_Layer: 0
   m_Name: landser
   m_TagString: landser
@@ -44,23 +44,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8291236419154338026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404344726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0797cb58651ba5d4aae87281617ae1f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
-  vida: 0
-  alvo: {fileID: 0}
-  modoAtaque: 0
-  cam: {fileID: 0}
 --- !u!65 &899920362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,6 +79,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1754194953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404344726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd4c51f0a0c920b4f824e18204e74d65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  alvo: {fileID: 0}
+  vida: 0
 --- !u!1 &1919460346
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,11 +577,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kar98K_ST
       objectReference: {fileID: 0}
-    - target: {fileID: 5885421013001978997, guid: d147396526a027e4d9867e8692a3ef93,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 136976317754354747, guid: d147396526a027e4d9867e8692a3ef93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -664,6 +657,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mosin_Nagant_1891.30_Scoped_ST
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258775735606261875, guid: f11f1a9d409961c4c91f78a45113fc33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
         type: 3}

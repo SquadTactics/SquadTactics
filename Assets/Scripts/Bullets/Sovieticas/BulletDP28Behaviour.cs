@@ -25,9 +25,9 @@ public class BulletDP28Behaviour : BulletsBehaviour {
 
     private void OnCollisionEnter(UnityEngine.Collision collision) {
         if (collision.gameObject.tag == "landser") {
-            float distancia = Vector3.Distance(collision.gameObject.GetComponent<LandserBehaviour>().transform.position, this.origem);
+            float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             this.CalcularDano(distancia);
-            collision.gameObject.GetComponent<LandserBehaviour>().LevaDano(this.dano);
+            collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);
             Destroy(this.gameObject);
         }
     }

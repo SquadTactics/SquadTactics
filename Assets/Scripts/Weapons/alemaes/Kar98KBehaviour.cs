@@ -33,7 +33,6 @@ public class Kar98KBehaviour : WeaponBehaviour
             {
                 if (this.capacidade == 0)
                 {
-                    Debug.Log("Ops");
                     StartCoroutine(Recarregar());
                 } else
                 {
