@@ -41,11 +41,11 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 10 && distancia <= 18)
+        else if (distancia > 10 && distancia <= 19)
         {
             this.dano = this.danoMedio;
         }
-        else if (distancia > 18 && distancia <= 22)
+        else if (distancia > 19 && distancia <= 25)
         {
             this.dano = this.danoLongo;
         }

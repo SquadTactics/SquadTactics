@@ -27,10 +27,8 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
         if (collision.gameObject.tag == "landser")
         {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
-            Debug.Log("Distancia: " + distancia);
             this.CalcularDano(distancia);
             collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);
-            Debug.Log("Dano: " + this.dano);
             Destroy(this.gameObject);
         }
     }

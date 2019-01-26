@@ -32,7 +32,8 @@ public class LandserBehaviour : PlayerBehaviour
             this.modoAtaque = false;
         }
 
-        if (this.modoAtaque) {
+        if (this.modoAtaque)
+        {
             if (!(this.alvo.GetVida() <= 0))
             {
                 this.modoAtaque = false;
