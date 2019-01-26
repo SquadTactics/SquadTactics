@@ -10,6 +10,8 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
         this.danoPequena = 10;
         this.danoMedio = 7.5f;
         this.danoLongo = 5;
+        Physics.IgnoreLayerCollision(14, 12);
+        Physics.IgnoreLayerCollision(14, 10);
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "landser")
+        if (collision.gameObject.layer == 11)
         {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             this.CalcularDano(distancia);

@@ -12,6 +12,8 @@ public class BulletDP28Behaviour : BulletsBehaviour {
         this.danoPequena = 16;
         this.danoMedio = 12;
         this.danoLongo = 8;
+        Physics.IgnoreLayerCollision(14, 12);
+        Physics.IgnoreLayerCollision(14, 10);
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class BulletDP28Behaviour : BulletsBehaviour {
     }
 
     private void OnCollisionEnter(UnityEngine.Collision collision) {
-        if (collision.gameObject.tag == "landser") {
+        if (collision.gameObject.layer == 11) {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             this.CalcularDano(distancia);
             collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);

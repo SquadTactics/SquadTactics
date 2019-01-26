@@ -11,7 +11,7 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     public PlayerBehaviour alvo;
 
     [Header("Status")]
-    protected float vida;
+    public float vida;
     protected bool modoAtaque;
 
     [Header("Movimentação")]

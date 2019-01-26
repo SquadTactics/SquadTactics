@@ -6,12 +6,13 @@ using UnityEngine.AI;
 
 public class UnidadeInfantaria : MonoBehaviour
 {
+    [Header("Soldados")]
     public List<PlayerBehaviour> soldados;
+
+    [Header("Status")]
     public bool destruida;
     public bool selecionada;
-    private NavMeshAgent agente;
-    private Vector3 destino;
-
+    
     // Start is called before the first frame update
     void Start() {
         this.GetComponents();
@@ -118,7 +119,6 @@ public class UnidadeInfantaria : MonoBehaviour
     public void GetComponents()
     {
         this.soldados = new List<PlayerBehaviour>();
-        this.agente = this.GetComponent<NavMeshAgent>();
         this.soldados.AddRange(this.GetComponentsInChildren<PlayerBehaviour>());
     }
 }

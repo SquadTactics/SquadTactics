@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 817231236482002055}
   - component: {fileID: 6662772446123539305}
   - component: {fileID: 531210770}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: bulletKar98K
   m_TagString: projetil
   m_Icon: {fileID: 0}
@@ -122,5 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 0
-  tempoDeVida: 0
-  alvo: {fileID: 0}

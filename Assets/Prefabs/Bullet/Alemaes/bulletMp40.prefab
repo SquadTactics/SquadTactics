@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3541887638764759714}
   - component: {fileID: 4759326974541234139}
   - component: {fileID: 1274952942}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: bulletMp40
   m_TagString: projetil
   m_Icon: {fileID: 0}
@@ -106,7 +106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 0
-  tempoDeVida: 0
 --- !u!54 &1274952942
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
         this.danoPequena = 25;
         this.danoMedio = 18.75f;
         this.danoLongo = 12.5f;
+        Physics.IgnoreLayerCollision(13, 12);
+        Physics.IgnoreLayerCollision(13, 11);
     }
 
     // Update is called once per frame
@@ -26,8 +28,9 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
 
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
-        if (collision.gameObject.tag == "landser")
+        if (collision.gameObject.layer == 10)
         {
+            Debug.Log("OKOK");
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             this.CalcularDano(distancia);
             collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);

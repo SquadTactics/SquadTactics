@@ -10,6 +10,8 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
         this.danoPequena = 30;
         this.danoMedio = 22.5f;
         this.danoLongo = 15;
+        Physics.IgnoreLayerCollision(14, 12);
+        Physics.IgnoreLayerCollision(14, 10);
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
 
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
-        if (collision.gameObject.tag == "landser")
+        if (collision.gameObject.layer == 11)
         {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             Debug.Log("Distancia: " + distancia);
