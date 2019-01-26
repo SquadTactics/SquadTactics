@@ -34,10 +34,16 @@ public class Kar98KBehaviour : WeaponBehaviour
                 return;
             } else
             {
-                this.podeAtirar = false;
-                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-                this.capacidade--;
-                StartCoroutine(Disparar());
+                if (this.capacidade == 0)
+                {
+                    StartCoroutine(Recarregar());
+                } else
+                {
+                    this.podeAtirar = false;
+                    Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                    this.capacidade--;
+                    StartCoroutine(Disparar());
+                }
             }
         }
     }

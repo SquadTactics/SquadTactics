@@ -41,14 +41,20 @@ public class DP28Behaviour : WeaponBehaviour {
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            if (!this.modoSupressao)
+            if (this.capacidade == 0)
             {
-                int sorteio = (int)Random.Range(5, 7);
-                StartCoroutine(Disparar(sorteio, 1, alvo));
-            }
-            else
+                StartCoroutine(Recarregar());
+            } else
             {
-                StartCoroutine(Disparar(45, 6, alvo));
+                if (!this.modoSupressao)
+                {
+                    int sorteio = (int)Random.Range(5, 7);
+                    StartCoroutine(Disparar(sorteio, 1, alvo));
+                }
+                else
+                {
+                    StartCoroutine(Disparar(45, 6, alvo));
+                }
             }
         }
     }
@@ -62,10 +68,6 @@ public class DP28Behaviour : WeaponBehaviour {
                 Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
-            } else
-            {
-                yield return new WaitForSeconds(3);
-                this.capacidade = 45;
             }
         }
         yield return new WaitForSeconds(tempoPraVoltarAtirar);

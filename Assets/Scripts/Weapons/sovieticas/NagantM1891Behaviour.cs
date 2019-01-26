@@ -27,16 +27,23 @@ public class NagantM1891Behaviour : WeaponBehaviour
     {
         if (this.podeAtirar)
         {
-            float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
-            if (distancia > 20)
+            if (this.capacidade == 0)
             {
-                return;
+                StartCoroutine(Recarregar());
             } else
             {
-                this.podeAtirar = false;
-                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
-                this.capacidade--;
-                StartCoroutine(this.EsperarPraAtirar());
+                float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
+                if (distancia > 20)
+                {
+                    return;
+                }
+                else
+                {
+                    this.podeAtirar = false;
+                    Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
+                    this.capacidade--;
+                    StartCoroutine(this.EsperarPraAtirar());
+                }
             }
         }
         this.podeAtirar = false;

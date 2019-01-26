@@ -28,11 +28,15 @@ public class Nagant1895Behaviour : WeaponBehaviour
     {
         if (this.podeAtirar)
         {
-            this.podeAtirar = false;
-            Debug.Log("Dis " + this.capacidade);
-            Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
-            this.capacidade--;
-            StartCoroutine(this.EsperarPraAtirar());
+            if (this.capacidade == 0)
+            {
+                StartCoroutine(Recarregar());
+            } else
+            {
+                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
+                this.capacidade--;
+                StartCoroutine(this.EsperarPraAtirar());
+            }
         }
     }
 

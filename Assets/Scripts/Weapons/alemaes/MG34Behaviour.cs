@@ -42,10 +42,16 @@ public class MG34Behaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            if (!this.modoSupressao)
+            if (this.capacidade == 0)
             {
-                int vezes = (int)UnityEngine.Random.Range(6, 8);
-                StartCoroutine(Disparar(alvo, vezes, 1));
+                StartCoroutine(Recarregar());
+            } else
+            {
+                if (!this.modoSupressao)
+                {
+                    int vezes = (int)UnityEngine.Random.Range(6, 8);
+                    StartCoroutine(Disparar(alvo, vezes, 1));
+                }
             }
 
         }
@@ -60,10 +66,6 @@ public class MG34Behaviour : WeaponBehaviour
                 Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
-            } else
-            {
-                yield return new WaitForSeconds(3);
-                this.capacidade = 50;
             }
         }
         yield return new WaitForSeconds(tempo);
@@ -74,8 +76,8 @@ public class MG34Behaviour : WeaponBehaviour
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
-        this.podeAtirar = true;
         this.capacidade = 50;
+        this.podeAtirar = true;
     }
 
     private void ModoSupressao()

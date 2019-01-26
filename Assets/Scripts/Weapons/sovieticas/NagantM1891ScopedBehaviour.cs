@@ -31,14 +31,19 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            int tempo = UnityEngine.Random.Range(6, 8);
-            StartCoroutine(Disparar(alvo, tempo));
+            if (this.capacidade == 0)
+            {
+                StartCoroutine(Recarregar());
+            } else
+            {
+                int tempo = UnityEngine.Random.Range(6, 8);
+                StartCoroutine(Disparar(alvo, tempo));
+            }
         }
     }
 
     private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
     {
-        Debug.Log("Dis " + this.capacidade);
         Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
         this.capacidade--;
         yield return new WaitForSeconds(tempo);
@@ -48,7 +53,7 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
-        this.podeAtirar = true;
         this.capacidade = 5;
+        this.podeAtirar = true;
     }
 }

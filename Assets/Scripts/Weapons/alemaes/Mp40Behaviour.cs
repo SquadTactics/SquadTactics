@@ -44,16 +44,20 @@ public class Mp40Behaviour : WeaponBehaviour {
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
-            if (!this.modoFull)
+            if (this.capacidade == 0)
             {
-                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
-                this.capacidade--;
-                int sorteio = (int)Random.Range(4, 7);
-                StartCoroutine(Disparar(sorteio, 1, alvo));
-            }
-            else
+                StartCoroutine(Recarregar());
+            } else
             {
-                StartCoroutine(Disparar(32, 5, alvo));
+                if (!this.modoFull)
+                {
+                    int sorteio = (int)Random.Range(4, 7);
+                    StartCoroutine(Disparar(sorteio, 1, alvo));
+                }
+                else
+                {
+                    StartCoroutine(Disparar(32, 5, alvo));
+                }
             }
         }
     }
@@ -67,10 +71,6 @@ public class Mp40Behaviour : WeaponBehaviour {
                 Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
-            } else
-            {
-                yield return new WaitForSeconds(3);
-                this.capacidade = 32;
             }
         }
         yield return new WaitForSeconds(tempoPraVoltarAtirar);

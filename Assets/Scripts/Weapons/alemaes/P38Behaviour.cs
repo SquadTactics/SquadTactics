@@ -28,9 +28,16 @@ public class P38Behaviour : WeaponBehaviour {
     {
         if (this.podeAtirar) {
             this.podeAtirar = false;
-            Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
-            this.capacidade--;
-            StartCoroutine(EsperarPraAtirar());
+            if (this.capacidade == 0)
+            {
+                StartCoroutine(Recarregar());
+            }
+            else
+            {
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.capacidade--;
+                StartCoroutine(EsperarPraAtirar());
+            }
         }
     }
 
