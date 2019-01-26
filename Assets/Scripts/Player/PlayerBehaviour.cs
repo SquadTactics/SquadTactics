@@ -36,6 +36,15 @@ public abstract class PlayerBehaviour : MonoBehaviour {
         this.alvo = alvo;
     }
 
+    public bool TemAlvo()
+    {
+        if (alvo != null)
+        {
+            return true;
+        }
+        return false;
+    }
+
     public float GetVida()
     {
         return this.vida;
@@ -44,4 +53,19 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     public abstract void Movimentar(Vector3 position);
 
     public abstract void Rotacionar(Vector3 position);
+
+    public void ProcuraAlvo(List<PlayerBehaviour> inimigo)
+    {
+        foreach (PlayerBehaviour soldado in inimigo)
+        {
+            if (!soldado.TemAlvo())
+            {
+                this.alvo = soldado;
+                soldado.SetAlvo(this);
+            } else
+            {
+                this.alvo = soldado;
+            }
+        }
+    }
 }

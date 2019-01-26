@@ -9,6 +9,8 @@ public class UnidadeInfantaria : MonoBehaviour
     [Header("Soldados")]
     public List<PlayerBehaviour> soldados;
 
+    public UnidadeInfantaria inimiga;
+
     [Header("Status")]
     public bool destruida;
     public bool selecionada;
@@ -35,6 +37,7 @@ public class UnidadeInfantaria : MonoBehaviour
                 StartCoroutine(this.Mover(Input.mousePosition));
             }
         }
+
         if (Input.GetMouseButtonDown(1))
         {
             if (this.selecionada)
@@ -53,13 +56,29 @@ public class UnidadeInfantaria : MonoBehaviour
         }
 
         this.Verifica();
+        this.verificaAlvos();
+    }
+
+    private void verificaAlvos()
+    {
+        foreach (PlayerBehaviour soldado in this.soldados)
+        {
+            if (!soldado.TemAlvo())
+            {
+                soldado.ProcuraAlvo(inimiga.GetSoldados());
+            }
+        }
+    }
+
+    public void SetInimiga(UnidadeInfantaria unidade2)
+    {
+        this.inimiga = unidade2;
     }
 
     private IEnumerator Mover(Vector3 pos)
     {
         if (!this.VerificarColisao(pos))
         {
-            Debug.Log("OKOK");
             Vector3 aux = new Vector3(pos.x, pos.y - 50, pos.z);
 
             float i = 50;

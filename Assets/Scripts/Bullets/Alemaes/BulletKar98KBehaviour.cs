@@ -30,7 +30,6 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
     {
         if (collision.gameObject.layer == 10)
         {
-            Debug.Log("OKOK");
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
             this.CalcularDano(distancia);
             collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);
