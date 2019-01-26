@@ -16,7 +16,7 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
     void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
-        if (distancia > 14)
+        if (distancia > 25)
         {
             Destroy(this.gameObject);
         }
@@ -37,15 +37,15 @@ public class BulletNagantM1891ScBehaviour : BulletsBehaviour {
 
     protected override void CalcularDano(float distancia)
     {
-        if (distancia >= 2 && distancia <= 6)
+        if (distancia >= 2 && distancia <= 10)
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 6 && distancia <= 10)
+        else if (distancia > 10 && distancia <= 18)
         {
             this.dano = this.danoMedio;
         }
-        else if (distancia > 10 && distancia <= 14)
+        else if (distancia > 18 && distancia <= 22)
         {
             this.dano = this.danoLongo;
         }

@@ -19,11 +19,11 @@ public class DP28Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade == 0)
+        /*if (this.capacidade == 0)
         {
             this.podeAtirar = false;
             StartCoroutine(Recarregar());
-        }
+        }*/
 
         if (Input.GetButtonDown("W"))
         {
@@ -62,6 +62,10 @@ public class DP28Behaviour : WeaponBehaviour {
                 Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
+            } else
+            {
+                yield return new WaitForSeconds(3);
+                this.capacidade = 45;
             }
         }
         yield return new WaitForSeconds(tempoPraVoltarAtirar);

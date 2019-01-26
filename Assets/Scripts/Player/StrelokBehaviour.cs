@@ -39,6 +39,7 @@ public class StrelokBehaviour : PlayerBehaviour
         {
             if (!(this.alvo.GetVida() <= 0))
             {
+                this.modoAtaque = false;
                 weapon.Atirar(this.alvo);
             }
         }

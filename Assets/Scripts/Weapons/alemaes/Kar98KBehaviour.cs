@@ -18,34 +18,33 @@ public class Kar98KBehaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade == 0)
+        /*if (this.capacidade == 0)
         {
             this.podeAtirar = false;
-            StartCoroutine(this.Recarregar());
-        }
+        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
     {
         if (this.podeAtirar)
         {
-            this.podeAtirar = false;
             float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
-            if (distancia > 10)
+            if (distancia > 20)
             {
                 return;
             } else
             {
-                int tempo = (int)UnityEngine.Random.Range(4, 6);
-                StartCoroutine(Disparar(alvo, tempo));
+                this.podeAtirar = false;
+                Instantiate(this.projetil, this.canoDaArma.position, this.canoDaArma.rotation);
+                this.capacidade--;
+                StartCoroutine(Disparar());
             }
         }
     }
 
-    private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
+    public IEnumerator Disparar()
     {
-        Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
-        this.capacidade--;
+        int tempo = UnityEngine.Random.Range(4, 7);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }

@@ -20,11 +20,11 @@ public class MG34Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade == 0)
+        /*if (this.capacidade == 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
-        }
+        }*/
 
         if (Input.GetButtonDown("W"))
         {
@@ -60,6 +60,10 @@ public class MG34Behaviour : WeaponBehaviour
                 Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
+            } else
+            {
+                yield return new WaitForSeconds(3);
+                this.capacidade = 50;
             }
         }
         yield return new WaitForSeconds(tempo);

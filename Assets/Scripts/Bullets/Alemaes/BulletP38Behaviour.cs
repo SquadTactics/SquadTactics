@@ -19,7 +19,7 @@ public class BulletP38Behaviour : BulletsBehaviour {
     {
         transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
-        if (distancia > 4)
+        if (distancia > 10)
         {
             Destroy(this.gameObject);
         }
@@ -37,11 +37,16 @@ public class BulletP38Behaviour : BulletsBehaviour {
     }
 
     protected override void CalcularDano(float distancia) {
-        if (distancia >= 2 && distancia < 3) {
+        if (distancia >= 2 && distancia <= 4)
+        {
             this.dano = this.danoPequena;
-        } else if (distancia >= 3 && distancia <= 3.5f) {
+        }
+        else if (distancia > 4 && distancia <= 7)
+        {
             this.dano = this.danoMedio;
-        } else if (distancia > 3.5f && distancia <= 4) {
+        }
+        else if (distancia > 7 && distancia <= 10)
+        {
             this.dano = this.danoLongo;
         }
     }

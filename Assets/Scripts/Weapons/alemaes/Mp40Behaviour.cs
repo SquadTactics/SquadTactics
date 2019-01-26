@@ -8,6 +8,8 @@ public class Mp40Behaviour : WeaponBehaviour {
     // O modo em que a arma estar.
     private bool modoFull;
 
+    private PlayerBehaviour alvo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +33,10 @@ public class Mp40Behaviour : WeaponBehaviour {
             this.AtivarModoNormal();
         }
 
-        if (this.capacidade == 0) {
+        /*if (this.capacidade == 0) {
             this.podeAtirar = false;
             StartCoroutine(Recarregar());
-        }
+        }*/
     }
     
     public override void Atirar(PlayerBehaviour alvo)
@@ -44,6 +46,8 @@ public class Mp40Behaviour : WeaponBehaviour {
             this.podeAtirar = false;
             if (!this.modoFull)
             {
+                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
+                this.capacidade--;
                 int sorteio = (int)Random.Range(4, 7);
                 StartCoroutine(Disparar(sorteio, 1, alvo));
             }
@@ -63,6 +67,10 @@ public class Mp40Behaviour : WeaponBehaviour {
                 Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 yield return new WaitForSeconds(0.2f);
+            } else
+            {
+                yield return new WaitForSeconds(3);
+                this.capacidade = 32;
             }
         }
         yield return new WaitForSeconds(tempoPraVoltarAtirar);

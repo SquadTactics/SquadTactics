@@ -6,7 +6,7 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
 
     // Use this for initialization
     void Start() {
-        this.velocidade = 1;
+        this.velocidade = 15;
         this.danoPequena = 10;
         this.danoMedio = 7.5f;
         this.danoLongo = 5;
@@ -16,7 +16,7 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
     void Update() {
         this.transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
-        if (distancia > 4)
+        if (distancia > 10)
         {
             Destroy(this.gameObject);
         }
@@ -37,15 +37,15 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
 
     protected override void CalcularDano(float distancia)
     {
-        if (distancia >= 2 && distancia <= 2.5)
+        if (distancia >= 2 && distancia <= 4)
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 2.5 && distancia <= 3.5)
+        else if (distancia > 4 && distancia <= 7)
         {
             this.dano = this.danoMedio;
         }
-        else if (distancia > 3.5 && distancia <= 4)
+        else if (distancia > 7 && distancia <= 10)
         {
             this.dano = this.danoLongo;
         }

@@ -18,11 +18,11 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade == 0)
+        /*if (this.capacidade == 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
-        }
+        }*/
 
     }
 
@@ -38,6 +38,7 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
 
     private IEnumerator Disparar(PlayerBehaviour alvo, int tempo)
     {
+        Debug.Log("Dis " + this.capacidade);
         Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
         this.capacidade--;
         yield return new WaitForSeconds(tempo);

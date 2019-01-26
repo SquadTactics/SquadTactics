@@ -18,7 +18,7 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
     {
         transform.Translate(Vector3.forward * this.velocidade * Time.deltaTime);
         distancia = Vector3.Distance(this.transform.position, this.origem);
-        if (distancia > 10)
+        if (distancia > 20)
         {
             Destroy(this.gameObject);
         }
@@ -29,25 +29,25 @@ public class BulletKar98KBehaviour : BulletsBehaviour {
         if (collision.gameObject.tag == "landser")
         {
             float distancia = Vector3.Distance(collision.gameObject.GetComponent<PlayerBehaviour>().transform.position, this.origem);
-            Debug.Log("Distancia: " + distancia);
+            //Debug.Log("Distancia: " + distancia);
             this.CalcularDano(distancia);
             collision.gameObject.GetComponent<PlayerBehaviour>().LevaDano(this.dano);
-            Debug.Log("Dano: " + this.dano);
+            //Debug.Log("Dano: " + this.dano);
             Destroy(this.gameObject);
         }
     }
 
     protected override void CalcularDano(float distancia)
     {
-        if (distancia >= 2 && distancia <= 4.5)
+        if (distancia >= 2 && distancia <= 8)
         {
             this.dano = this.danoPequena;
         }
-        else if (distancia > 4.5 && distancia <= 7)
+        else if (distancia > 8 && distancia <= 14)
         {
             this.dano = this.danoMedio;
         }
-        else if (distancia > 7 && distancia <= 10)
+        else if (distancia > 14 && distancia <= 20)
         {
             this.dano = this.danoLongo;
         }

@@ -35,6 +35,7 @@ public class LandserBehaviour : PlayerBehaviour
         if (this.modoAtaque) {
             if (!(this.alvo.GetVida() <= 0))
             {
+                this.modoAtaque = false;
                 weapon.Atirar(this.alvo);
             }
         }

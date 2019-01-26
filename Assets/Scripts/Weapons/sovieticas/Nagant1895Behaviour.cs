@@ -17,11 +17,11 @@ public class Nagant1895Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade <= 0)
+        /*if (this.capacidade <= 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
-        }
+        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -29,6 +29,7 @@ public class Nagant1895Behaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
+            Debug.Log("Dis " + this.capacidade);
             Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
             this.capacidade--;
             StartCoroutine(this.EsperarPraAtirar());

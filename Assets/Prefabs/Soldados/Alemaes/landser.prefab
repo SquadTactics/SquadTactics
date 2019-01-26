@@ -579,6 +579,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kar98K_ST
       objectReference: {fileID: 0}
+    - target: {fileID: 5885421013001978997, guid: d147396526a027e4d9867e8692a3ef93,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 136976317754354747, guid: d147396526a027e4d9867e8692a3ef93,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -659,11 +664,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mosin_Nagant_1891.30_Scoped_ST
-      objectReference: {fileID: 0}
-    - target: {fileID: 7258775735606261875, guid: f11f1a9d409961c4c91f78a45113fc33,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6788214988836581599, guid: f11f1a9d409961c4c91f78a45113fc33,
         type: 3}

@@ -16,11 +16,11 @@ public class NagantM1891Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (this.capacidade == 0)
+        /*if (this.capacidade == 0)
         {
             this.podeAtirar = false;
             StartCoroutine(this.Recarregar());
-        }
+        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -28,7 +28,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
         if (this.podeAtirar)
         {
             float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
-            if (distancia > 10)
+            if (distancia > 20)
             {
                 return;
             } else
@@ -39,11 +39,12 @@ public class NagantM1891Behaviour : WeaponBehaviour
                 StartCoroutine(this.EsperarPraAtirar());
             }
         }
+        this.podeAtirar = false;
     }
 
     private IEnumerator EsperarPraAtirar()
     {
-        int tempo = Random.Range(4, 7);
+        int tempo = Random.Range(4, 8);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }
