@@ -19,12 +19,6 @@ public class DP28Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-        /*if (this.capacidade == 0)
-        {
-            this.podeAtirar = false;
-            StartCoroutine(Recarregar());
-        }*/
-
         if (Input.GetButtonDown("W"))
         {
             this.AtivarModoSupressao();

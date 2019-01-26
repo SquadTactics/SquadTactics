@@ -17,11 +17,6 @@ public class P38Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-        /*if (this.capacidade == 0)
-        {
-            this.podeAtirar = false;
-            StartCoroutine(Recarregar());
-        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)

@@ -17,17 +17,13 @@ public class Nagant1895Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (this.capacidade <= 0)
-        {
-            this.podeAtirar = false;
-            StartCoroutine(this.Recarregar());
-        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
     {
         if (this.podeAtirar)
         {
+            this.podeAtirar = false;
             if (this.capacidade == 0)
             {
                 StartCoroutine(Recarregar());
@@ -43,8 +39,8 @@ public class Nagant1895Behaviour : WeaponBehaviour
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
-        this.podeAtirar = true;
         this.capacidade = 7;
+        this.podeAtirar = true;
     }
 
     private IEnumerator EsperarPraAtirar()

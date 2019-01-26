@@ -32,11 +32,6 @@ public class Mp40Behaviour : WeaponBehaviour {
         if (Input.GetButtonDown("Q")) {
             this.AtivarModoNormal();
         }
-
-        /*if (this.capacidade == 0) {
-            this.podeAtirar = false;
-            StartCoroutine(Recarregar());
-        }*/
     }
     
     public override void Atirar(PlayerBehaviour alvo)
