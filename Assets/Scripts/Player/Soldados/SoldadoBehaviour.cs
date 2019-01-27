@@ -34,6 +34,9 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
             {
                 this.modoAtaque = false;
                 weapon.Atirar(this.alvo);
+            } else
+            {
+                this.alvo = null;
             }
         }
     }
