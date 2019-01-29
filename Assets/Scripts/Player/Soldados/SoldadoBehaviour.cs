@@ -39,6 +39,12 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
                 this.alvo = null;
             }
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject bombaInst = Instantiate(this.bomba, this.transform.position, this.transform.rotation) as GameObject;
+            bombaInst.GetComponent<Rigidbody>().AddForce(new Vector3(this.transform.position.x, 8.5f, 8.5f * transform.localScale.z), ForceMode.Impulse);
+        }
     }
 
     public override void Movimentar(Vector3 position)

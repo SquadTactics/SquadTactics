@@ -9,10 +9,11 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     [Header("Ataque")]
     public WeaponBehaviour weapon;
     public PlayerBehaviour alvo;
+    public GameObject bomba;
 
     [Header("Status")]
     public float vida;
-    protected bool modoAtaque;
+    public bool modoAtaque;
 
     [Header("Movimentação")]
     protected NavMeshAgent agente;
