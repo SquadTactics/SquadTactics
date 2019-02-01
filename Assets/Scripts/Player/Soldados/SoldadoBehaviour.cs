@@ -9,6 +9,7 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
     void Start()
     {
         this.GetComponents();
+        this.podeJogar = true;
     }
 
     // Update is called once per frame
@@ -40,11 +41,18 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && this.podeJogar)
         {
-            GameObject bombaInst = Instantiate(this.bomba, this.transform.position, this.transform.rotation) as GameObject;
-            bombaInst.GetComponent<Rigidbody>().AddForce(new Vector3(this.transform.position.x, 8.5f, 8.5f * transform.localScale.z), ForceMode.Impulse);
+            this.podeJogar = false;
+            Instantiate(this.bomba, this.transform.position, this.transform.rotation);
+            StartCoroutine(Esperar());
         }
+    }
+
+    private IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(30);
+        this.podeJogar = true;
     }
 
     public override void Movimentar(Vector3 position)

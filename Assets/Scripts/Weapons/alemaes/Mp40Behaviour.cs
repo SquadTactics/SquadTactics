@@ -24,7 +24,6 @@ public class Mp40Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-
         if (Input.GetButtonDown("W")) {
             this.AtivarModoFull();
         }

@@ -9,7 +9,6 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     [Header("Ataque")]
     public WeaponBehaviour weapon;
     public PlayerBehaviour alvo;
-    public GameObject bomba;
 
     [Header("Status")]
     public float vida;
@@ -18,6 +17,11 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     [Header("Movimentação")]
     protected NavMeshAgent agente;
     protected Vector3 destino;
+
+    [Header("Bombas")]
+    public BombaBehaviour bomba;
+    public bool podeJogar;
+
 
 
     // Start is called before the first frame update

@@ -321,7 +321,17 @@ PrefabInstance:
     - target: {fileID: 1754194953, guid: 8761a38b5bbdbf3488a4dcb2a9da6751, type: 3}
       propertyPath: bomba
       value: 
-      objectReference: {fileID: 6707306689868278309, guid: f6492e7e0b79de745a7ef9157560bb77,
+      objectReference: {fileID: 5608558164618977912, guid: f6492e7e0b79de745a7ef9157560bb77,
         type: 3}
+    - target: {fileID: 5885421013598526189, guid: 8761a38b5bbdbf3488a4dcb2a9da6751,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058331185684610573, guid: 8761a38b5bbdbf3488a4dcb2a9da6751,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8761a38b5bbdbf3488a4dcb2a9da6751, type: 3}
