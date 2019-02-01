@@ -243,6 +243,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1994526537592468876, guid: 39cb78251f5a06b408ed91935fd1c955,
+        type: 3}
+      propertyPath: baioneta
+      value: 
+      objectReference: {fileID: 807968291}
     - target: {fileID: 6573334209883858811, guid: 39cb78251f5a06b408ed91935fd1c955,
         type: 3}
       propertyPath: m_IsActive
@@ -256,6 +261,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 223218965}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &807968291 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1030132534, guid: 39cb78251f5a06b408ed91935fd1c955,
+    type: 3}
+  m_PrefabInstance: {fileID: 223218965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6474ca730fd13eb4e807e68d9ce7702a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &889697435
 PrefabInstance:
   m_ObjectHideFlags: 0
