@@ -50,4 +50,9 @@ public class NagantM1891ScopedBehaviour : WeaponBehaviour
         this.capacidade = 5;
         this.podeAtirar = true;
     }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        // Feels :(
+    }
 }

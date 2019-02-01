@@ -49,4 +49,9 @@ public class Nagant1895Behaviour : WeaponBehaviour
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        // Feels :(
+    }
 }

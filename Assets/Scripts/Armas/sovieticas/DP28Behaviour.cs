@@ -19,7 +19,7 @@ public class DP28Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("W"))
+        /*if (Input.GetButtonDown("W"))
         {
             this.AtivarModoSupressao();
         }
@@ -27,7 +27,7 @@ public class DP28Behaviour : WeaponBehaviour {
         if (Input.GetButtonDown("Q"))
         {
             this.AtivarModoNormal();
-        }
+        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -83,5 +83,16 @@ public class DP28Behaviour : WeaponBehaviour {
     public void AtivarModoNormal()
     {
         this.modoSupressao = false;
+    }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        if (this.modoSupressao)
+        {
+            this.modoSupressao = false;
+        } else
+        {
+            this.modoSupressao = true;
+        }
     }
 }

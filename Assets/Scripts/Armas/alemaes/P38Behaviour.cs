@@ -49,4 +49,9 @@ public class P38Behaviour : WeaponBehaviour {
         this.capacidade = 8;
         this.podeAtirar = true;
     }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        // Feels :(
+    }
 }

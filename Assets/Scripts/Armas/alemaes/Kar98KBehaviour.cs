@@ -22,7 +22,7 @@ public class Kar98KBehaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("W"))
+        /*if (Input.GetButtonDown("W"))
         {
             this.faca.gameObject.SetActive(true);
             this.podeAtirar = false;
@@ -34,7 +34,7 @@ public class Kar98KBehaviour : WeaponBehaviour
             this.faca.gameObject.SetActive(false);
             this.atacarComFaca = false;
             this.podeAtirar = true;
-        }
+        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -85,5 +85,21 @@ public class Kar98KBehaviour : WeaponBehaviour
         yield return new WaitForSeconds(3);
         this.capacidade = 5;
         this.podeAtirar = true;
+    }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        if (this.atacarComFaca)
+        {
+            this.faca.gameObject.SetActive(false);
+            this.atacarComFaca = false;
+            this.podeAtirar = true;
+        }
+        else
+        {
+            this.faca.gameObject.SetActive(true);
+            this.podeAtirar = false;
+            this.atacarComFaca = true;
+        }
     }
 }

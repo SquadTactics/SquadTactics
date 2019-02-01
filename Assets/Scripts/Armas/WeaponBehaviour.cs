@@ -37,6 +37,8 @@ public abstract class WeaponBehaviour : MonoBehaviour
     /// </summary>
     public abstract void Atirar(PlayerBehaviour alvo);
 
+    public abstract void AtivarOuDesativarHabilidade();
+
     /// <summary>
     ///     Method that deals with the logic of reloading the weapon.
     /// </summary>

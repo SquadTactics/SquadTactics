@@ -21,7 +21,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("W"))
+        /*if (Input.GetButtonDown("W"))
         {
             this.baioneta.gameObject.SetActive(true);
             this.podeAtirar = false;
@@ -33,7 +33,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
             this.baioneta.gameObject.SetActive(false);
             this.atacarComBaioneta = false;
             this.podeAtirar = true;
-        }
+        }*/
 
     }
 
@@ -87,5 +87,20 @@ public class NagantM1891Behaviour : WeaponBehaviour
         yield return new WaitForSeconds(3);
         this.capacidade = 7;
         this.podeAtirar = true;
+    }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        if (this.atacarComBaioneta)
+        {
+            this.baioneta.gameObject.SetActive(false);
+            this.atacarComBaioneta = false;
+            this.podeAtirar = true;
+        } else
+        {
+            this.baioneta.gameObject.SetActive(true);
+            this.podeAtirar = false;
+            this.atacarComBaioneta = true;
+        }
     }
 }

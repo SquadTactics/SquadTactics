@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
+using System;
 
 public abstract class SoldadoBehaviour : PlayerBehaviour
 {
@@ -47,6 +48,24 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
             Instantiate(this.bomba, this.lancarBomba.transform.position, this.lancarBomba.transform.rotation);
             StartCoroutine(Esperar());
         }
+        this.Skills();
+    }
+
+    public abstract void Skills();
+
+    public void ModoAgachado()
+    {
+        // TODO.
+    }
+
+    public void AumentarVelocidadeDeCorrer()
+    {
+        // TODO.
+    }
+
+    public void ArremessarGranada()
+    {
+        // TODO.
     }
 
     private IEnumerator Esperar()
