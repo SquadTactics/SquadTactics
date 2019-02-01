@@ -3,6 +3,10 @@ using System.Collections;
 
 public class NagantM1891Behaviour : WeaponBehaviour
 {
+
+    public GameObject baioneta;
+    public bool atacarComBaioneta;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -11,11 +15,20 @@ public class NagantM1891Behaviour : WeaponBehaviour
         this.danoPequena = 22;
         this.danoMedio = 16.5f;
         this.danoLongo = 11;
+        this.atacarComBaioneta = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("W"))
+        {
+            this.baioneta.SetActive(true);
+            this.podeAtirar = false;
+            this.atacarComBaioneta = true;
+        }
+        
+
     }
 
     public override void Atirar(PlayerBehaviour alvo)

@@ -188,11 +188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mosin_Nagant_1891.30_ST
       objectReference: {fileID: 0}
-    - target: {fileID: 387212511706012616, guid: 39cb78251f5a06b408ed91935fd1c955,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8804969002005528606, guid: 39cb78251f5a06b408ed91935fd1c955,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -248,29 +243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1185666783, guid: 39cb78251f5a06b408ed91935fd1c955, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3340388887553457852, guid: 39cb78251f5a06b408ed91935fd1c955,
+    - target: {fileID: 6573334209883858811, guid: 39cb78251f5a06b408ed91935fd1c955,
         type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6369992380656527811, guid: 39cb78251f5a06b408ed91935fd1c955,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7982514928039300483, guid: 39cb78251f5a06b408ed91935fd1c955,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8492793537370849975, guid: 39cb78251f5a06b408ed91935fd1c955,
-        type: 3}
-      propertyPath: m_Layer
-      value: 10
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39cb78251f5a06b408ed91935fd1c955, type: 3}
