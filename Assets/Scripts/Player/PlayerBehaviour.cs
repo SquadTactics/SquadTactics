@@ -21,6 +21,7 @@ public abstract class PlayerBehaviour : MonoBehaviour {
     [Header("Bombas")]
     public BombaBehaviour bomba;
     public bool podeJogar;
+    public Transform lancarBomba; 
 
 
 
