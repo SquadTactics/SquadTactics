@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BaionetaMNBehaviour : MonoBehaviour
+public class K98Behaviour : MonoBehaviour
 {
 
     public float dano;
@@ -11,7 +11,7 @@ public class BaionetaMNBehaviour : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        this.dano = 30;
+        this.dano = 25;
         this.alcance = 2;
         this.penetracao = 1;
     }
@@ -27,7 +27,7 @@ public class BaionetaMNBehaviour : MonoBehaviour
         float distancia = Vector3.Distance(this.transform.position, alvo.transform.position);
         if (distancia < 2)
         {
-            // TODO Animação de atacar com a baioneta(Coronhada).
+            // TODO Animação de atacar com a faca(Coronhada)
             alvo.LevaDano(this.dano);
         }
     }

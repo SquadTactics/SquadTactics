@@ -5,6 +5,9 @@ using System;
 public class Kar98KBehaviour : WeaponBehaviour
 {
 
+    public K98Behaviour faca;
+    public bool atacarComFaca;
+
     // Use this for initialization
     void Start()
     {
@@ -13,15 +16,35 @@ public class Kar98KBehaviour : WeaponBehaviour
         this.danoPequena = 25;
         this.danoMedio = 18.75f;
         this.danoLongo = 12.5f;
+        this.atacarComFaca = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetButtonDown("W"))
+        {
+            this.faca.gameObject.SetActive(true);
+            this.podeAtirar = false;
+            this.atacarComFaca = true;
+        }
+
+        if (Input.GetButtonDown("Q"))
+        {
+            this.faca.gameObject.SetActive(false);
+            this.atacarComFaca = false;
+            this.podeAtirar = true;
+        }
     }
 
     public override void Atirar(PlayerBehaviour alvo)
     {
+        if (this.atacarComFaca)
+        {
+            this.atacarComFaca = false;
+            this.faca.Atacar(alvo);
+            StartCoroutine(Esperar());
+        }
         if (this.podeAtirar)
         {
             this.podeAtirar = false;
@@ -49,6 +72,12 @@ public class Kar98KBehaviour : WeaponBehaviour
         int tempo = UnityEngine.Random.Range(4, 7);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
+    }
+
+    private IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(2);
+        this.atacarComFaca = true;
     }
 
     public override IEnumerator Recarregar()
