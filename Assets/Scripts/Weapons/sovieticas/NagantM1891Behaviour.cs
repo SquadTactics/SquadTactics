@@ -4,7 +4,7 @@ using System.Collections;
 public class NagantM1891Behaviour : WeaponBehaviour
 {
 
-    public GameObject baioneta;
+    public BaionetaMNBehaviour baioneta;
     public bool atacarComBaioneta;
     
     // Start is called before the first frame update
@@ -23,16 +23,28 @@ public class NagantM1891Behaviour : WeaponBehaviour
     {
         if (Input.GetButtonDown("W"))
         {
-            this.baioneta.SetActive(true);
+            this.baioneta.gameObject.SetActive(true);
             this.podeAtirar = false;
             this.atacarComBaioneta = true;
         }
         
+        if (Input.GetButtonDown("Q"))
+        {
+            this.baioneta.gameObject.SetActive(false);
+            this.atacarComBaioneta = false;
+            this.podeAtirar = true;
+        }
 
     }
 
     public override void Atirar(PlayerBehaviour alvo)
     {
+        if (atacarComBaioneta)
+        {
+            this.atacarComBaioneta = false;
+            this.baioneta.Atacar(alvo);
+            StartCoroutine(Esperar());
+        }
         if (this.podeAtirar)
         {
             if (this.capacidade == 0)
@@ -62,6 +74,12 @@ public class NagantM1891Behaviour : WeaponBehaviour
         int tempo = Random.Range(4, 8);
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
+    }
+
+    private IEnumerator Esperar()
+    {
+        yield return new WaitForSeconds(3);
+        this.atacarComBaioneta = true;
     }
 
     public override IEnumerator Recarregar()
