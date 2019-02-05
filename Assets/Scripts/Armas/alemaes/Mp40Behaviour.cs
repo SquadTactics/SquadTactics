@@ -24,13 +24,6 @@ public class Mp40Behaviour : WeaponBehaviour {
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetButtonDown("W")) {
-            this.AtivarModoFull();
-        }
-
-        if (Input.GetButtonDown("Q")) {
-            this.AtivarModoNormal();
-        }*/
     }
     
     public override void Atirar(PlayerBehaviour alvo)
@@ -71,20 +64,21 @@ public class Mp40Behaviour : WeaponBehaviour {
         this.podeAtirar = true;
     }
 
-    public override IEnumerator Recarregar() {
-        yield return new WaitForSeconds(3);
-        this.capacidade = 32;
-        this.podeAtirar = true;
-    }
-
     public override void AtivarOuDesativarHabilidade()
     {
         if (this.modoFull)
         {
             this.modoFull = false;
-        } else
+        }
+        else
         {
             this.modoFull = true;
         }
+    }
+
+    public override IEnumerator Recarregar() {
+        yield return new WaitForSeconds(3);
+        this.capacidade = 32;
+        this.podeAtirar = true;
     }
 }

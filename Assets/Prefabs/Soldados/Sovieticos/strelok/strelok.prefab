@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 399132822721239588}
   - component: {fileID: 8611471142988165680}
   - component: {fileID: 966581029}
-  - component: {fileID: 5726836210003203539}
   - component: {fileID: 817216232}
+  - component: {fileID: 560000652}
   m_Layer: 10
   m_Name: strelok
   m_TagString: strelok
@@ -114,19 +114,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!65 &5726836210003203539
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636297530}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1635795, y: 1.8475266, z: 0.3266603}
-  m_Center: {x: -0.00233683, y: 0.94100475, z: -0.012469232}
 --- !u!114 &817216232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +133,20 @@ MonoBehaviour:
   bomba: {fileID: 404433078633810080, guid: 5eee4db513f5cce4983600f83208e5a1, type: 3}
   podeJogar: 0
   lancarBomba: {fileID: 3753681621305001575}
+--- !u!136 &560000652
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636297530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.24131209
+  m_Height: 1.8555181
+  m_Direction: 1
+  m_Center: {x: -0.007787198, y: 0.92775905, z: -0.04156977}
 --- !u!1 &4878532726008615826
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3753681621305001575}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: LancarBomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -248,6 +249,11 @@ PrefabInstance:
       propertyPath: baioneta
       value: 
       objectReference: {fileID: 807968291}
+    - target: {fileID: 6573334209883858811, guid: 39cb78251f5a06b408ed91935fd1c955,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6573334209883858811, guid: 39cb78251f5a06b408ed91935fd1c955,
         type: 3}
       propertyPath: m_IsActive

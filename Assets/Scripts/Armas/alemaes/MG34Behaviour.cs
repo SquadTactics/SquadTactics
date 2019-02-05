@@ -20,15 +20,6 @@ public class MG34Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetButtonDown("W"))
-        {
-            this.ModoSupressao();
-        }
-
-        if (Input.GetButtonDown("Q"))
-        {
-            this.ModoNormal();
-        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -67,31 +58,22 @@ public class MG34Behaviour : WeaponBehaviour
 
     }
 
-    public override IEnumerator Recarregar()
-    {
-        yield return new WaitForSeconds(3);
-        this.capacidade = 50;
-        this.podeAtirar = true;
-    }
-
-    private void ModoSupressao()
-    {
-        this.modoSupressao = true;
-    }
-
-    private void ModoNormal()
-    {
-        this.modoSupressao = false;
-    }
-
     public override void AtivarOuDesativarHabilidade()
     {
         if (this.modoSupressao)
         {
             this.modoSupressao = false;
-        } else
+        }
+        else
         {
             this.modoSupressao = true;
         }
+    }
+
+    public override IEnumerator Recarregar()
+    {
+        yield return new WaitForSeconds(3);
+        this.capacidade = 50;
+        this.podeAtirar = true;
     }
 }

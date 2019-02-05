@@ -22,19 +22,6 @@ public class Kar98KBehaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetButtonDown("W"))
-        {
-            this.faca.gameObject.SetActive(true);
-            this.podeAtirar = false;
-            this.atacarComFaca = true;
-        }
-
-        if (Input.GetButtonDown("Q"))
-        {
-            this.faca.gameObject.SetActive(false);
-            this.atacarComFaca = false;
-            this.podeAtirar = true;
-        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -51,6 +38,7 @@ public class Kar98KBehaviour : WeaponBehaviour
             float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
             if (distancia > 20)
             {
+                this.podeAtirar = true;
                 return;
             } else
             {
@@ -64,6 +52,22 @@ public class Kar98KBehaviour : WeaponBehaviour
                     StartCoroutine(EsperarPraAtirar());
                 }
             }
+        }
+    }
+
+    public override void AtivarOuDesativarHabilidade()
+    {
+        if (this.atacarComFaca)
+        {
+            this.faca.gameObject.SetActive(false);
+            this.atacarComFaca = false;
+            this.podeAtirar = true;
+        }
+        else
+        {
+            this.faca.gameObject.SetActive(true);
+            this.podeAtirar = false;
+            this.atacarComFaca = true;
         }
     }
 
@@ -85,21 +89,5 @@ public class Kar98KBehaviour : WeaponBehaviour
         yield return new WaitForSeconds(3);
         this.capacidade = 5;
         this.podeAtirar = true;
-    }
-
-    public override void AtivarOuDesativarHabilidade()
-    {
-        if (this.atacarComFaca)
-        {
-            this.faca.gameObject.SetActive(false);
-            this.atacarComFaca = false;
-            this.podeAtirar = true;
-        }
-        else
-        {
-            this.faca.gameObject.SetActive(true);
-            this.podeAtirar = false;
-            this.atacarComFaca = true;
-        }
     }
 }

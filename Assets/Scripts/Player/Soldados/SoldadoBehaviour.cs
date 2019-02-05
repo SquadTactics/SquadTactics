@@ -42,12 +42,12 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0) && this.podeJogar)
+        /*if (Input.GetMouseButtonDown(0) && this.podeJogar)
         {
             this.podeJogar = false;
             Instantiate(this.bomba, this.lancarBomba.transform.position, this.lancarBomba.transform.rotation);
             StartCoroutine(Esperar());
-        }
+        }*/
         this.Skills();
     }
 
