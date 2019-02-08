@@ -4,7 +4,8 @@ using System;
 
 public class MG34Behaviour : WeaponBehaviour
 {
-    private bool modoSupressao;
+    public bool modoSupressao;
+    public bool voltarAtivarModoSupressao;
 
     // Use this for initialization
     void Start()
@@ -15,6 +16,7 @@ public class MG34Behaviour : WeaponBehaviour
         this.danoPequena = 18;
         this.danoMedio = 13.5f;
         this.danoLongo = 9;
+        this.voltarAtivarModoSupressao = false;
     }
 
     // Update is called once per frame
@@ -36,6 +38,10 @@ public class MG34Behaviour : WeaponBehaviour
                 {
                     int vezes = (int)UnityEngine.Random.Range(6, 8);
                     StartCoroutine(Disparar(alvo, vezes, 1));
+                } else
+                {
+                    StartCoroutine(Disparar(alvo, 32, 5));
+                    this.AtivarOuDesativarHabilidade();
                 }
             }
 
@@ -60,14 +66,22 @@ public class MG34Behaviour : WeaponBehaviour
 
     public override void AtivarOuDesativarHabilidade()
     {
-        if (this.modoSupressao)
+        if (this.modoSupressao && this.voltarAtivarModoSupressao)
         {
             this.modoSupressao = false;
+            StartCoroutine(Esperar(2.5f));
         }
-        else
+        else if (!this.voltarAtivarModoSupressao)
         {
             this.modoSupressao = true;
+            this.voltarAtivarModoSupressao = true;
         }
+    }
+
+    private IEnumerator Esperar(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        this.voltarAtivarModoSupressao = false;
     }
 
     public override IEnumerator Recarregar()

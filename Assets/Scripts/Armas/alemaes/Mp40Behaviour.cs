@@ -43,7 +43,12 @@ public class Mp40Behaviour : WeaponBehaviour {
                 }
                 else
                 {
+                    if (this.capacidade <= 24)
+                    {
+                        StartCoroutine(this.Recarregar());
+                    }
                     StartCoroutine(Disparar(32, 5, alvo));
+                    this.modoFull = false;
                 }
             }
         }
