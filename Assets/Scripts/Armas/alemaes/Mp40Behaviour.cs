@@ -6,7 +6,7 @@ using UnityEngine;
 public class Mp40Behaviour : WeaponBehaviour {
 
     // O modo em que a arma estar.
-    private bool modoFull;
+    public bool modoFull;
 
     private PlayerBehaviour alvo;
 

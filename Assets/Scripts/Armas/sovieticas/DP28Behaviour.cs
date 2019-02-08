@@ -3,7 +3,8 @@ using System.Collections;
 
 public class DP28Behaviour : WeaponBehaviour {
 
-    private bool modoSupressao;
+    public bool modoSupressao;
+    public bool voltarAtivarModoSupressao;
 
     // Start is called before the first frame update
     void Start()
@@ -14,20 +15,12 @@ public class DP28Behaviour : WeaponBehaviour {
         this.danoPequena = 16;
         this.danoMedio = 12;
         this.danoLongo = 8;
+        this.voltarAtivarModoSupressao = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if (Input.GetButtonDown("W"))
-        {
-            this.AtivarModoSupressao();
-        }
-
-        if (Input.GetButtonDown("Q"))
-        {
-            this.AtivarModoNormal();
-        }*/
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -48,6 +41,7 @@ public class DP28Behaviour : WeaponBehaviour {
                 else
                 {
                     StartCoroutine(Disparar(45, 6, alvo));
+                    this.AtivarOuDesativarHabilidade();
                 }
             }
         }
@@ -68,31 +62,30 @@ public class DP28Behaviour : WeaponBehaviour {
         this.podeAtirar = true;
     }
 
+    public override void AtivarOuDesativarHabilidade()
+    {
+        if (this.modoSupressao && this.voltarAtivarModoSupressao)
+        {
+            this.modoSupressao = false;
+            StartCoroutine(Esperar(2.0f));
+        }
+        else if (!this.voltarAtivarModoSupressao)
+        {
+            this.modoSupressao = true;
+            this.voltarAtivarModoSupressao = true;
+        }
+    }
+
+    private IEnumerator Esperar(float tempo)
+    {
+        yield return new WaitForSeconds(tempo);
+        this.voltarAtivarModoSupressao = false;
+    }
+
     public override IEnumerator Recarregar()
     {
         yield return new WaitForSeconds(3);
         this.capacidade = 45;
         this.podeAtirar = true;
-    }
-
-    public void AtivarModoSupressao()
-    {
-        this.modoSupressao = true;
-    }
-
-    public void AtivarModoNormal()
-    {
-        this.modoSupressao = false;
-    }
-
-    public override void AtivarOuDesativarHabilidade()
-    {
-        if (this.modoSupressao)
-        {
-            this.modoSupressao = false;
-        } else
-        {
-            this.modoSupressao = true;
-        }
     }
 }
