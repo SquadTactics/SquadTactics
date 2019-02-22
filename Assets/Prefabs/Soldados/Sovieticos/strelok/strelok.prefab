@@ -246,6 +246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1994526537592468876, guid: 39cb78251f5a06b408ed91935fd1c955,
         type: 3}
+      propertyPath: canoDaArma
+      value: 
+      objectReference: {fileID: 1273355253}
+    - target: {fileID: 1994526537592468876, guid: 39cb78251f5a06b408ed91935fd1c955,
+        type: 3}
       propertyPath: baioneta
       value: 
       objectReference: {fileID: 807968291}
@@ -264,6 +269,12 @@ PrefabInstance:
 --- !u!4 &8804969002084568331 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8804969002005528606, guid: 39cb78251f5a06b408ed91935fd1c955,
+    type: 3}
+  m_PrefabInstance: {fileID: 223218965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1273355253 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1185666784, guid: 39cb78251f5a06b408ed91935fd1c955,
     type: 3}
   m_PrefabInstance: {fileID: 223218965}
   m_PrefabAsset: {fileID: 0}
@@ -385,6 +396,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7550250654425004268, guid: a7032e518c82d9041aa79382152d0f3f,
+        type: 3}
+      propertyPath: canoDaArma
+      value: 
+      objectReference: {fileID: 1755657181}
     - target: {fileID: 8291034816579229427, guid: a7032e518c82d9041aa79382152d0f3f,
         type: 3}
       propertyPath: m_Layer
@@ -410,6 +426,12 @@ PrefabInstance:
 --- !u!4 &7538896340717244058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7538896339996129793, guid: a7032e518c82d9041aa79382152d0f3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 889697435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1755657181 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1570932550, guid: a7032e518c82d9041aa79382152d0f3f,
     type: 3}
   m_PrefabInstance: {fileID: 889697435}
   m_PrefabAsset: {fileID: 0}

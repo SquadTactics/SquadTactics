@@ -8,8 +8,6 @@ public class Mp40Behaviour : WeaponBehaviour {
     // O modo em que a arma estar.
     public bool modoFull;
 
-    private PlayerBehaviour alvo;
-
     // Start is called before the first frame update
     void Start()
     {
