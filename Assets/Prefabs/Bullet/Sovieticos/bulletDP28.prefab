@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 860640455035653186}
   - component: {fileID: 770069897737656775}
   - component: {fileID: 5141661614305089306}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bulletDP28
   m_TagString: projetil
   m_Icon: {fileID: 0}
@@ -122,4 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 0
-  tempoDeVida: 0

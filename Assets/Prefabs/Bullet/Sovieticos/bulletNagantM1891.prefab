@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6846764773399559449}
   - component: {fileID: 8840730929362717006}
   - component: {fileID: 6648521655485677084}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: bulletNagantM1891
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,4 +122,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidade: 0
-  tempoDeVida: 0

@@ -7,6 +7,8 @@ TagManager:
   - parede
   - projetil
   - landser
+  - Unidade
+  - strelok
   layers:
   - Default
   - TransparentFX
@@ -17,12 +19,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - bala
   - 
-  - 
-  - 
-  - 
-  - 
+  - strelok
+  - landser
+  - unidade
+  - balaA
+  - balaS
   - 
   - 
   - 
@@ -41,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: strelok
+    uniqueID: 3398918487
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
