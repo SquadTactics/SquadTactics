@@ -1,33 +1,70 @@
 fileFormatVersion: 2
-guid: 1751f62882a1159429dbafea37342244
+guid: f7e9d7aef6456c04a9deb838cf88a3b4
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: K98_Blade
-    100002: K98_Holder
-    100004: //RootNode
-    400000: K98_Blade
-    400002: K98_Holder
-    400004: //RootNode
-    2100000: K98_holder_Mat
-    2100002: K98_Blade_Mat
-    2300000: K98_Blade
-    2300002: K98_Holder
-    3300000: K98_Blade
-    3300002: K98_Holder
-    4300000: K98_Holder
-    4300002: K98_Blade
+    100000: MG34:MG34 1
+    100002: MG34:MG34_Bipod
+    100004: MG34:MG34_Bolt
+    100006: MG34:MG34_Drum
+    100008: MG34:MG34_Stock
+    100010: MG34:MG34_Trigger_1
+    100012: MG34:MG34_Trigger_2
+    100014: //RootNode
+    400000: MG34:MG34 1
+    400002: MG34:MG34_Bipod
+    400004: MG34:MG34_Bolt
+    400006: MG34:MG34_Drum
+    400008: MG34:MG34_Stock
+    400010: MG34:MG34_Trigger_1
+    400012: MG34:MG34_Trigger_2
+    400014: //RootNode
+    2100000: MG34_MG34_Drum1
+    2100002: MG34_MG34_Metal
+    2100004: MG34_MG34_Stock1
+    2100006: MG34_MG34_Bipod2
+    2300000: MG34:MG34 1
+    2300002: MG34:MG34_Bipod
+    2300004: MG34:MG34_Bolt
+    2300006: MG34:MG34_Drum
+    2300008: MG34:MG34_Stock
+    2300010: MG34:MG34_Trigger_1
+    2300012: MG34:MG34_Trigger_2
+    3300000: MG34:MG34 1
+    3300002: MG34:MG34_Bipod
+    3300004: MG34:MG34_Bolt
+    3300006: MG34:MG34_Drum
+    3300008: MG34:MG34_Stock
+    3300010: MG34:MG34_Trigger_1
+    3300012: MG34:MG34_Trigger_2
+    4300000: MG34:MG34_Drum
+    4300002: MG34:MG34
+    4300004: MG34:MG34_Trigger_1
+    4300006: MG34:MG34_Trigger_2
+    4300008: MG34:MG34_Bolt
+    4300010: MG34:MG34_Stock
+    4300012: MG34:MG34_Bipod
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_Blade_Mat
-    second: {fileID: 2100000, guid: 25347b55815801f48b2831f556e44ce1, type: 2}
+      name: MG34_MG34_Bipod2
+    second: {fileID: 2100000, guid: 8e452dace31cc744b8ef8599e41dfb5e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_holder_Mat
-    second: {fileID: 2100000, guid: 0e0294d2a47057e43809a21a1144e244, type: 2}
+      name: MG34_MG34_Drum1
+    second: {fileID: 2100000, guid: 6b1a97e484ee5d8458f12e3e84f0bcc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Metal
+    second: {fileID: 2100000, guid: 4c06aeb618d2a2c4189c40808339f205, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Stock1
+    second: {fileID: 2100000, guid: 1460afaffdb4fe341b3114f818d8d611, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

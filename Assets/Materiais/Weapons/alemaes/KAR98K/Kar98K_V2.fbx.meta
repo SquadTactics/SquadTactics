@@ -1,33 +1,43 @@
 fileFormatVersion: 2
-guid: 1751f62882a1159429dbafea37342244
+guid: 1d2196c7dafd7cc4e85a0bb326d6aac0
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: K98_Blade
-    100002: K98_Holder
-    100004: //RootNode
-    400000: K98_Blade
-    400002: K98_Holder
-    400004: //RootNode
-    2100000: K98_holder_Mat
-    2100002: K98_Blade_Mat
-    2300000: K98_Blade
-    2300002: K98_Holder
-    3300000: K98_Blade
-    3300002: K98_Holder
-    4300000: K98_Holder
-    4300002: K98_Blade
+    100000: Kar98K_Bolt
+    100002: Kar98K_Furnitune
+    100004: Kar98K_Metal
+    100006: Kar98K_Trigger
+    100008: //RootNode
+    400000: Kar98K_Bolt
+    400002: Kar98K_Furnitune
+    400004: Kar98K_Metal
+    400006: Kar98K_Trigger
+    400008: //RootNode
+    2100000: Kar98K_Metal_Mat
+    2100002: Kar98K_Furnitune_Mat
+    2300000: Kar98K_Bolt
+    2300002: Kar98K_Furnitune
+    2300004: Kar98K_Metal
+    2300006: Kar98K_Trigger
+    3300000: Kar98K_Bolt
+    3300002: Kar98K_Furnitune
+    3300004: Kar98K_Metal
+    3300006: Kar98K_Trigger
+    4300000: Kar98K_Bolt
+    4300002: Kar98K_Metal
+    4300004: Kar98K_Trigger
+    4300006: Kar98K_Furnitune
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_Blade_Mat
-    second: {fileID: 2100000, guid: 25347b55815801f48b2831f556e44ce1, type: 2}
+      name: Kar98K_Furnitune_Mat
+    second: {fileID: 2100000, guid: cc1004e93b185004680b5d7bc7f97de9, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_holder_Mat
-    second: {fileID: 2100000, guid: 0e0294d2a47057e43809a21a1144e244, type: 2}
+      name: Kar98K_Metal_Mat
+    second: {fileID: 2100000, guid: 9dd94a544114fb544aa1d60056f3e58d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

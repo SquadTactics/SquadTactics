@@ -1,33 +1,38 @@
 fileFormatVersion: 2
-guid: 1751f62882a1159429dbafea37342244
+guid: c38f4a01053b8f54bb72ab734cbf3fd6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: K98_Blade
-    100002: K98_Holder
+    100000: P38_Body1
+    100002: P38_Furnitune2
     100004: //RootNode
-    400000: K98_Blade
-    400002: K98_Holder
+    100006: P38_Trigger
+    400000: P38_Body1
+    400002: P38_Furnitune2
     400004: //RootNode
-    2100000: K98_holder_Mat
-    2100002: K98_Blade_Mat
-    2300000: K98_Blade
-    2300002: K98_Holder
-    3300000: K98_Blade
-    3300002: K98_Holder
-    4300000: K98_Holder
-    4300002: K98_Blade
+    400006: P38_Trigger
+    2100000: P38_Furnitune
+    2100002: P38_Metalic
+    2300000: P38_Body1
+    2300002: P38_Furnitune2
+    2300004: P38_Trigger
+    3300000: P38_Body1
+    3300002: P38_Furnitune2
+    3300004: P38_Trigger
+    4300000: P38_Furnitune2
+    4300002: P38_Body1
+    4300004: P38_Trigger
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_Blade_Mat
-    second: {fileID: 2100000, guid: 25347b55815801f48b2831f556e44ce1, type: 2}
+      name: P38_Furnitune
+    second: {fileID: 2100000, guid: 47886b4e4e771ff4c893f3d3fedb2554, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_holder_Mat
-    second: {fileID: 2100000, guid: 0e0294d2a47057e43809a21a1144e244, type: 2}
+      name: P38_Metalic
+    second: {fileID: 2100000, guid: 5aee2e7ed8804da47b485a6682fedb2b, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

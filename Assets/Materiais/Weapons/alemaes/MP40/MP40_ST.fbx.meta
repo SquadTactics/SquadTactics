@@ -1,33 +1,60 @@
 fileFormatVersion: 2
-guid: 1751f62882a1159429dbafea37342244
+guid: 2ee9ae552343f7342b41b08afec58873
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: K98_Blade
-    100002: K98_Holder
-    100004: //RootNode
-    400000: K98_Blade
-    400002: K98_Holder
-    400004: //RootNode
-    2100000: K98_holder_Mat
-    2100002: K98_Blade_Mat
-    2300000: K98_Blade
-    2300002: K98_Holder
-    3300000: K98_Blade
-    3300002: K98_Holder
-    4300000: K98_Holder
-    4300002: K98_Blade
+    100000: MP40_Body_1
+    100002: MP40_Body_2
+    100004: MP40_Bolt
+    100006: MP40_Magazine1
+    100008: MP40_Shoulder
+    100010: //RootNode
+    100012: MP40_Stock
+    100014: MP40_Trigger
+    100016: Stock
+    400000: MP40_Body_1
+    400002: MP40_Body_2
+    400004: MP40_Bolt
+    400006: MP40_Magazine1
+    400008: MP40_Shoulder
+    400010: //RootNode
+    400012: MP40_Stock
+    400014: MP40_Trigger
+    400016: Stock
+    2100000: MP40_Barrel_Mat
+    2100002: MP40_Detail_Mat
+    2300000: MP40_Body_1
+    2300002: MP40_Body_2
+    2300004: MP40_Bolt
+    2300006: MP40_Magazine1
+    2300008: MP40_Shoulder
+    2300010: MP40_Stock
+    2300012: MP40_Trigger
+    3300000: MP40_Body_1
+    3300002: MP40_Body_2
+    3300004: MP40_Bolt
+    3300006: MP40_Magazine1
+    3300008: MP40_Shoulder
+    3300010: MP40_Stock
+    3300012: MP40_Trigger
+    4300000: MP40_Magazine1
+    4300002: MP40_Bolt
+    4300004: MP40_Trigger
+    4300006: MP40_Body_1
+    4300008: MP40_Body_2
+    4300010: MP40_Shoulder
+    4300012: MP40_Stock
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_Blade_Mat
-    second: {fileID: 2100000, guid: 25347b55815801f48b2831f556e44ce1, type: 2}
+      name: MP40_Barrel_Mat
+    second: {fileID: 2100000, guid: c0d25e8ac3d9b6d4bbcfb2f8e29ac605, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_holder_Mat
-    second: {fileID: 2100000, guid: 0e0294d2a47057e43809a21a1144e244, type: 2}
+      name: MP40_Detail_Mat
+    second: {fileID: 2100000, guid: f9335811ba0fa124d9773f1f2af4f385, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

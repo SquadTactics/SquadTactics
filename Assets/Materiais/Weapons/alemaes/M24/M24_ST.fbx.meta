@@ -1,33 +1,26 @@
 fileFormatVersion: 2
-guid: 1751f62882a1159429dbafea37342244
+guid: 36cfc9b0f8a86a64c8338e422b1899d8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: K98_Blade
-    100002: K98_Holder
-    100004: //RootNode
-    400000: K98_Blade
-    400002: K98_Holder
-    400004: //RootNode
-    2100000: K98_holder_Mat
-    2100002: K98_Blade_Mat
-    2300000: K98_Blade
-    2300002: K98_Holder
-    3300000: K98_Blade
-    3300002: K98_Holder
-    4300000: K98_Holder
-    4300002: K98_Blade
+    100000: //RootNode
+    400000: //RootNode
+    2100000: M24_Metal
+    2100002: M24_Wood
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: M24
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_Blade_Mat
-    second: {fileID: 2100000, guid: 25347b55815801f48b2831f556e44ce1, type: 2}
+      name: M24_Metal
+    second: {fileID: 2100000, guid: 964361c0e969bcc4aa84947a1487a9ba, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: K98_holder_Mat
-    second: {fileID: 2100000, guid: 0e0294d2a47057e43809a21a1144e244, type: 2}
+      name: M24_Wood
+    second: {fileID: 2100000, guid: fe02fad214fbe384186aae7a3e781dd4, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
