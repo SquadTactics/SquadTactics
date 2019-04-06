@@ -1,38 +1,38 @@
 fileFormatVersion: 2
-guid: c38f4a01053b8f54bb72ab734cbf3fd6
+guid: 2ab314c7340e4f14eafdb056173765b7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: P38_Body1
-    100002: P38_Furnitune2
+    100000: Luger_P08_Body
+    100002: Luger_P08_Furnitune
     100004: //RootNode
-    100006: P38_Trigger
-    400000: P38_Body1
-    400002: P38_Furnitune2
+    100006: Luger_P08_Trigger
+    400000: Luger_P08_Body
+    400002: Luger_P08_Furnitune
     400004: //RootNode
-    400006: P38_Trigger
-    2100000: P38_Furnitune
-    2100002: P38_Metalic
-    2300000: P38_Body1
-    2300002: P38_Furnitune2
-    2300004: P38_Trigger
-    3300000: P38_Body1
-    3300002: P38_Furnitune2
-    3300004: P38_Trigger
-    4300000: P38_Furnitune2
-    4300002: P38_Body1
-    4300004: P38_Trigger
+    400006: Luger_P08_Trigger
+    2100000: P08_Body
+    2100002: P08_Furnitune
+    2300000: Luger_P08_Body
+    2300002: Luger_P08_Furnitune
+    2300004: Luger_P08_Trigger
+    3300000: Luger_P08_Body
+    3300002: Luger_P08_Furnitune
+    3300004: Luger_P08_Trigger
+    4300000: Luger_P08_Body
+    4300002: Luger_P08_Trigger
+    4300004: Luger_P08_Furnitune
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: P38_Furnitune
-    second: {fileID: 2100000, guid: 47886b4e4e771ff4c893f3d3fedb2554, type: 2}
+      name: P08_Body
+    second: {fileID: 2100000, guid: b348d6c0f977e2d4c840ba1e4d662cc0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: P38_Metalic
-    second: {fileID: 2100000, guid: 5aee2e7ed8804da47b485a6682fedb2b, type: 2}
+      name: P08_Furnitune
+    second: {fileID: 2100000, guid: c87260542c7663b49844175583514122, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
