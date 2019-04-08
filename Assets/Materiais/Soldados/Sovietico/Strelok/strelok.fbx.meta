@@ -18,7 +18,57 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: sterlok
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_blouse_stelok
+    second: {fileID: 2100000, guid: f32b045102676224f81e0779a3689c8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_boot_strelok
+    second: {fileID: 2100000, guid: ed9c7bef54b55874eb45264efe1829f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_button_strelok
+    second: {fileID: 2100000, guid: 74c00588343b23b4680d600f007c9e8d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_eyes_strelok
+    second: {fileID: 2100000, guid: 38cdb7849417a1d4286cf693d5f3a9e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_detail_strelok
+    second: {fileID: 2100000, guid: f9daf3a3a81c50b4ba45c218d76c5e69, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_detail_two_strelok
+    second: {fileID: 2100000, guid: 818ffa0cb8e20e7429dd5b335cab923d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_strelok
+    second: {fileID: 2100000, guid: 5c69e45e0e906a44ab8f90fe886fac02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_patent_strelok
+    second: {fileID: 2100000, guid: 892370e9409fa714d8764d08d6b4153c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_skin_strelok
+    second: {fileID: 2100000, guid: f6a8bbe987644e845ba215b884329dc0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_trousers_strelok
+    second: {fileID: 2100000, guid: f5088c4eacb097549b78c30bc0b84ace, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

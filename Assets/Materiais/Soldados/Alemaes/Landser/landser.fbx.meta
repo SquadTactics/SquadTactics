@@ -3,29 +3,66 @@ guid: b764fc56bd1eda84b826d5f5fee8a32f
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: hand:back
-    100002: //RootNode
-    100004: landser
-    100006: left
-    400000: hand:back
-    400002: //RootNode
-    400004: landser
-    400006: left
-    2000000: hand:back
-    2000002: left
-    2100000: mat_helmet_detail_landser
-    2100002: mat_helmet_detail_two_landser
-    2100004: mat_helmet_landser
-    2100006: mat_eyes_landser
-    2100008: mat_skin_lander
-    2100010: mat_button_landser
-    2100012: mat_coat_landser
-    2100014: mat_boot_landser
-    2100016: mat_trousers_landser
-    2300000: landser
-    3300000: landser
-    4300000: landser
-  externalObjects: {}
+    100000: //RootNode
+    400000: //RootNode
+    2100000: mat_skin_lander
+    2100002: mat_coat_landser
+    2100004: mat_button_landser
+    2100006: mat_helmet_detail_landser
+    2100008: mat_helmet_landser
+    2100010: mat_helmet_detail_two_landser
+    2100012: mat_boot_landser
+    2100014: mat_trousers_landser
+    2100016: mat_eyes_landser
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: polySurface30
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_boot_landser
+    second: {fileID: 2100000, guid: bc896f3e7461923488bc52eb10da02a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_button_landser
+    second: {fileID: 2100000, guid: 219580cdbf77b824fa71482889277bc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_coat_landser
+    second: {fileID: 2100000, guid: 65dba527e3d0b7343ad17ef52bc1e65b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_eyes_landser
+    second: {fileID: 2100000, guid: b6e39d1af36176d42a1513cbfd321a78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_detail_landser
+    second: {fileID: 2100000, guid: f645121450517314ab7c76823bc61491, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_detail_two_landser
+    second: {fileID: 2100000, guid: e5f631102fe4aec4f9b3d207c676199f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_helmet_landser
+    second: {fileID: 2100000, guid: 111cca79dacaec94e9b8add526419e5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_skin_lander
+    second: {fileID: 2100000, guid: fa6040b97f20e5b41905dd1659a7fe02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_trousers_landser
+    second: {fileID: 2100000, guid: f5143a2b1bf3ec94f8af3efd1ca799e5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
