@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: 132bbae3a38c6fe49a9b9fba08f5847a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: CM_Janela_1
+    100004: CM_Janela_2
+    100006: CM_Janela_3
+    100008: CM_Janela_3 1
+    100010: CM_Janela_3 2
+    100012: CM_Janela_4
+    100014: CM_Janela_4 1
+    100016: CM_Janela_4 2
+    100018: CM_Janela_5
+    100020: CM_Janela_6
+    100022: CMe_Casa
+    100024: CMe_Janelas_1
+    100026: CMe_Janelas_2
+    100028: Cme_Janelas_3
+    100030: Cme_Janelas_4
+    100032: Cme_Janelas_5
+    400000: //RootNode
+    400002: CM_Janela_1
+    400004: CM_Janela_2
+    400006: CM_Janela_3
+    400008: CM_Janela_3 1
+    400010: CM_Janela_3 2
+    400012: CM_Janela_4
+    400014: CM_Janela_4 1
+    400016: CM_Janela_4 2
+    400018: CM_Janela_5
+    400020: CM_Janela_6
+    400022: CMe_Casa
+    400024: CMe_Janelas_1
+    400026: CMe_Janelas_2
+    400028: Cme_Janelas_3
+    400030: Cme_Janelas_4
+    400032: Cme_Janelas_5
+    2100000: CMe_Madeira
+    2100002: CMe_Chamine
+    2100004: CMe_Telhado
+    2100006: CMe_Parede
+    2100008: CMe_Aberturas
+    2300000: CM_Janela_1
+    2300002: CM_Janela_2
+    2300004: CM_Janela_3
+    2300006: CM_Janela_3 1
+    2300008: CM_Janela_3 2
+    2300010: CM_Janela_4
+    2300012: CM_Janela_4 1
+    2300014: CM_Janela_4 2
+    2300016: CM_Janela_5
+    2300018: CM_Janela_6
+    2300020: CMe_Casa
+    3300000: CM_Janela_1
+    3300002: CM_Janela_2
+    3300004: CM_Janela_3
+    3300006: CM_Janela_3 1
+    3300008: CM_Janela_3 2
+    3300010: CM_Janela_4
+    3300012: CM_Janela_4 1
+    3300014: CM_Janela_4 2
+    3300016: CM_Janela_5
+    3300018: CM_Janela_6
+    3300020: CMe_Casa
+    4300000: CMe_Casa
+    4300002: CM_Janela_4
+    4300004: CM_Janela_3
+    4300006: CM_Janela_4
+    4300008: CM_Janela_3
+    4300010: CM_Janela_4
+    4300012: CM_Janela_3
+    4300014: CM_Janela_6
+    4300016: CM_Janela_5
+    4300018: CM_Janela_2
+    4300020: CM_Janela_1
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CMe_Aberturas
+    second: {fileID: 2100000, guid: 0fdf96207aee7724d8759626250b20a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CMe_Chamine
+    second: {fileID: 2100000, guid: 94c59a81ccb1b804db3addb6101cdb3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CMe_Madeira
+    second: {fileID: 2100000, guid: e02abd2df389c7e41a3996c7fe3389c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CMe_Parede
+    second: {fileID: 2100000, guid: 38ac51889afa6934d879fd13e9fb7046, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CMe_Telhado
+    second: {fileID: 2100000, guid: dfdc1c9554606114f97b6f980d1f70d7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
