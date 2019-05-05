@@ -1,20 +1,26 @@
 fileFormatVersion: 2
-guid: a37c065e3470cbb428e830dbd8209a2e
+guid: cc887a09f36e84740abb63af4dc8b621
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Balde_Mat
+    2100000: Machado1
+    2100002: Cabo
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Balde
+    4300000: Machado
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Balde_Mat
-    second: {fileID: 2100000, guid: 4adb7c9692949864086928a53511a246, type: 2}
+      name: Cabo
+    second: {fileID: 2100000, guid: 4a89d5e2775acb74f941833bdaabb62e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Machado1
+    second: {fileID: 2100000, guid: 4a8f1c5bd9e2bdf4ab19511088e67e41, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
