@@ -1,0 +1,274 @@
+fileFormatVersion: 2
+guid: bab3a5807b308064aa1f2c42b43ffd60
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Esteira_D
+    100002: Esteira_E
+    100004: MG34:MG34
+    100006: MG34:MG34 1
+    100008: MG34:MG34_Bolt
+    100010: MG34:MG34_Drum
+    100012: MG34:MG34_Stock
+    100014: MG34:MG34_Trigger_1
+    100016: MG34:MG34_Trigger_2
+    100018: SdKfz250_Hull3
+    100020: //RootNode
+    100022: SdKfz_250_Right_Main_Wheel
+    100024: SdKfz_250_Right_Wheel
+    100026: SdKfz_250_Right_Wheel2
+    100028: SdKfz_250_Right_Wheel3
+    100030: SdKfz_250_Right_Wheel4
+    100032: SdKfz_250_Right_Wheel5
+    100034: SdKfz_250_Right_Wheel6
+    100036: SdKfz_250_Suspencao_Direita
+    100038: SdKfz_250_Suspencao_Esquerda
+    100040: SdKfz_251_Left_Main_Wheel
+    100042: SdKfz_251_Left_Wheel
+    100044: SdKfz_251_Left_Wheel2
+    100046: SdKfz_251_Left_Wheel3
+    100048: SdKfz_251_Left_Wheel4
+    100050: SdKfz_251_Left_Wheel5
+    100052: SdKfz_251_Left_Wheel6
+    400000: Esteira_D
+    400002: Esteira_E
+    400004: MG34:MG34
+    400006: MG34:MG34 1
+    400008: MG34:MG34_Bolt
+    400010: MG34:MG34_Drum
+    400012: MG34:MG34_Stock
+    400014: MG34:MG34_Trigger_1
+    400016: MG34:MG34_Trigger_2
+    400018: SdKfz250_Hull3
+    400020: //RootNode
+    400022: SdKfz_250_Right_Main_Wheel
+    400024: SdKfz_250_Right_Wheel
+    400026: SdKfz_250_Right_Wheel2
+    400028: SdKfz_250_Right_Wheel3
+    400030: SdKfz_250_Right_Wheel4
+    400032: SdKfz_250_Right_Wheel5
+    400034: SdKfz_250_Right_Wheel6
+    400036: SdKfz_250_Suspencao_Direita
+    400038: SdKfz_250_Suspencao_Esquerda
+    400040: SdKfz_251_Left_Main_Wheel
+    400042: SdKfz_251_Left_Wheel
+    400044: SdKfz_251_Left_Wheel2
+    400046: SdKfz_251_Left_Wheel3
+    400048: SdKfz_251_Left_Wheel4
+    400050: SdKfz_251_Left_Wheel5
+    400052: SdKfz_251_Left_Wheel6
+    2100000: SdKfz_250_Esteira
+    2100002: SdKfz250_Rodas_2
+    2100004: SdKfz250_Rodas_1
+    2100006: SdKfz250_Pneu_Frontal
+    2100008: MG34_MG34_Drum2
+    2100010: MG34_MG34_Metal1
+    2100012: MG34_MG34_Stock2
+    2100014: SdKfz250_Hull
+    2100016: SdKfz250_Banco
+    2100018: SdKfz250_Interno
+    2300000: Esteira_D
+    2300002: Esteira_E
+    2300004: MG34:MG34 1
+    2300006: MG34:MG34_Bolt
+    2300008: MG34:MG34_Drum
+    2300010: MG34:MG34_Stock
+    2300012: MG34:MG34_Trigger_1
+    2300014: MG34:MG34_Trigger_2
+    2300016: SdKfz250_Hull3
+    2300018: SdKfz_250_Right_Main_Wheel
+    2300020: SdKfz_250_Right_Wheel
+    2300022: SdKfz_250_Right_Wheel2
+    2300024: SdKfz_250_Right_Wheel3
+    2300026: SdKfz_250_Right_Wheel4
+    2300028: SdKfz_250_Right_Wheel5
+    2300030: SdKfz_250_Right_Wheel6
+    2300032: SdKfz_251_Left_Main_Wheel
+    2300034: SdKfz_251_Left_Wheel
+    2300036: SdKfz_251_Left_Wheel2
+    2300038: SdKfz_251_Left_Wheel3
+    2300040: SdKfz_251_Left_Wheel4
+    2300042: SdKfz_251_Left_Wheel5
+    2300044: SdKfz_251_Left_Wheel6
+    3300000: Esteira_D
+    3300002: Esteira_E
+    3300004: MG34:MG34 1
+    3300006: MG34:MG34_Bolt
+    3300008: MG34:MG34_Drum
+    3300010: MG34:MG34_Stock
+    3300012: MG34:MG34_Trigger_1
+    3300014: MG34:MG34_Trigger_2
+    3300016: SdKfz250_Hull3
+    3300018: SdKfz_250_Right_Main_Wheel
+    3300020: SdKfz_250_Right_Wheel
+    3300022: SdKfz_250_Right_Wheel2
+    3300024: SdKfz_250_Right_Wheel3
+    3300026: SdKfz_250_Right_Wheel4
+    3300028: SdKfz_250_Right_Wheel5
+    3300030: SdKfz_250_Right_Wheel6
+    3300032: SdKfz_251_Left_Main_Wheel
+    3300034: SdKfz_251_Left_Wheel
+    3300036: SdKfz_251_Left_Wheel2
+    3300038: SdKfz_251_Left_Wheel3
+    3300040: SdKfz_251_Left_Wheel4
+    3300042: SdKfz_251_Left_Wheel5
+    3300044: SdKfz_251_Left_Wheel6
+    4300000: Esteira_D
+    4300002: SdKfz_250_Right_Wheel5
+    4300004: SdKfz_250_Right_Wheel6
+    4300006: SdKfz_250_Right_Wheel4
+    4300008: SdKfz_250_Right_Wheel3
+    4300010: SdKfz_250_Right_Wheel2
+    4300012: SdKfz_250_Right_Wheel
+    4300014: SdKfz_250_Right_Main_Wheel
+    4300016: Esteira_E
+    4300018: SdKfz_251_Left_Wheel5
+    4300020: SdKfz_251_Left_Wheel6
+    4300022: SdKfz_251_Left_Wheel4
+    4300024: SdKfz_251_Left_Wheel3
+    4300026: SdKfz_251_Left_Wheel2
+    4300028: SdKfz_251_Left_Wheel
+    4300030: SdKfz_251_Left_Main_Wheel
+    4300032: MG34:MG34_Drum
+    4300034: MG34:MG34
+    4300036: MG34:MG34_Trigger_1
+    4300038: MG34:MG34_Trigger_2
+    4300040: MG34:MG34_Bolt
+    4300042: MG34:MG34_Stock
+    4300044: SdKfz250_Hull3
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Drum2
+    second: {fileID: 2100000, guid: a54bf5e61454f034f956af162d0a69a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Metal1
+    second: {fileID: 2100000, guid: ebf6b636737284b44abc5e6e7e7fa023, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Stock2
+    second: {fileID: 2100000, guid: 51a164aebebe3ec4c8be50b38410aa75, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Banco
+    second: {fileID: 2100000, guid: c4109f82bcfe583478268ce376dbddaa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Hull
+    second: {fileID: 2100000, guid: 8320a277a31234f4b92fe4187b4748f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Interno
+    second: {fileID: 2100000, guid: c1165ce982bd49441ab611dec6c545cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Pneu_Frontal
+    second: {fileID: 2100000, guid: 9042bb8cdb2fc124681bbb510de2687f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Rodas_1
+    second: {fileID: 2100000, guid: 83829e48b1d372c43bd343d72e1b6e4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz250_Rodas_2
+    second: {fileID: 2100000, guid: 76fc1f5dde8364f43a3e4c15d84a46d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SdKfz_250_Esteira
+    second: {fileID: 2100000, guid: e885ea3ee87c6c4479fcc51c76310ce4, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
