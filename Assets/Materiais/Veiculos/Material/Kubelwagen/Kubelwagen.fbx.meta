@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 9e2216cfdfdff524997fb2f1f3455b0a
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Kubelwagen 1
+    100004: MG34:MG34
+    100006: MG34:MG34 1
+    100008: MG34:MG34_Bipod
+    100010: MG34:MG34_Bolt
+    100012: MG34:MG34_Drum
+    100014: MG34:MG34_Stock
+    100016: MG34:MG34_Trigger_1
+    100018: MG34:MG34_Trigger_2
+    100020: Wheel_BL
+    100022: Wheel_BR
+    100024: Wheel_FL
+    100026: Wheel_FR
+    100028: Wheel_Top
+    400000: //RootNode
+    400002: Kubelwagen 1
+    400004: MG34:MG34
+    400006: MG34:MG34 1
+    400008: MG34:MG34_Bipod
+    400010: MG34:MG34_Bolt
+    400012: MG34:MG34_Drum
+    400014: MG34:MG34_Stock
+    400016: MG34:MG34_Trigger_1
+    400018: MG34:MG34_Trigger_2
+    400020: Wheel_BL
+    400022: Wheel_BR
+    400024: Wheel_FL
+    400026: Wheel_FR
+    400028: Wheel_Top
+    2100000: Kubelwagen_Mat
+    2100002: Kubelwagen_Lona
+    2100004: Kubel_Sit_Mat
+    2100006: Wheel_Rubber
+    2100008: Wheel_Metalic
+    2100010: MG34_MG34_Drum1
+    2100012: MG34_MG34_Metal
+    2100014: MG34_MG34_Stock1
+    2300000: Kubelwagen 1
+    2300002: MG34:MG34 1
+    2300004: MG34:MG34_Bipod
+    2300006: MG34:MG34_Bolt
+    2300008: MG34:MG34_Drum
+    2300010: MG34:MG34_Stock
+    2300012: MG34:MG34_Trigger_1
+    2300014: MG34:MG34_Trigger_2
+    2300016: Wheel_BL
+    2300018: Wheel_BR
+    2300020: Wheel_FL
+    2300022: Wheel_FR
+    2300024: Wheel_Top
+    3300000: Kubelwagen 1
+    3300002: MG34:MG34 1
+    3300004: MG34:MG34_Bipod
+    3300006: MG34:MG34_Bolt
+    3300008: MG34:MG34_Drum
+    3300010: MG34:MG34_Stock
+    3300012: MG34:MG34_Trigger_1
+    3300014: MG34:MG34_Trigger_2
+    3300016: Wheel_BL
+    3300018: Wheel_BR
+    3300020: Wheel_FL
+    3300022: Wheel_FR
+    3300024: Wheel_Top
+    4300000: Kubelwagen
+    4300002: Wheel_BR
+    4300004: Wheel_BL
+    4300006: Wheel_FR
+    4300008: Wheel_FL
+    4300010: Wheel_Top
+    4300012: MG34:MG34_Drum
+    4300014: MG34:MG34
+    4300016: MG34:MG34_Trigger_1
+    4300018: MG34:MG34_Trigger_2
+    4300020: MG34:MG34_Bolt
+    4300022: MG34:MG34_Stock
+    4300024: MG34:MG34_Bipod
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kubel_Sit_Mat
+    second: {fileID: 2100000, guid: 491a2a58b8f40e947b772a5b7f96a2e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kubelwagen_Lona
+    second: {fileID: 2100000, guid: 2236eadbdee96d94ea1e02a0773ca346, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kubelwagen_Mat
+    second: {fileID: 2100000, guid: cbf85e10a5588e24a985038849cfb11f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Drum1
+    second: {fileID: 2100000, guid: bd62f183cada57342b741f1144370284, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Metal
+    second: {fileID: 2100000, guid: c6b855b10bee3bf439965dc3e3996c2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MG34_MG34_Stock1
+    second: {fileID: 2100000, guid: 76d1bf6e12c77234f8b0003b3028234d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Metalic
+    second: {fileID: 2100000, guid: b3eabb90ab8ed6f46945ffa86bca1bf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wheel_Rubber
+    second: {fileID: 2100000, guid: 6b41208a0e5fd57469e68c9ff7969b38, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
