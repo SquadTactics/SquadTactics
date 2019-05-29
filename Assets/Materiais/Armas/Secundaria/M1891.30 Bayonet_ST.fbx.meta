@@ -1,44 +1,24 @@
 fileFormatVersion: 2
-guid: 4639613425aa81044a7ba9994d8afe32
+guid: af6a29bfb0a0a184dafdf4bfd452d0e6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: PPD40_Body1
-    100004: PPD40_Drum1
-    100006: PPD40_Furnitune1
-    100008: PPD40_Trigger
-    400000: //RootNode
-    400002: PPD40_Body1
-    400004: PPD40_Drum1
-    400006: PPD40_Furnitune1
-    400008: PPD40_Trigger
-    2100000: PPD40_Body
-    2100002: PPD40_Furnitune
-    2300000: PPD40_Body1
-    2300002: PPD40_Drum1
-    2300004: PPD40_Furnitune1
-    2300006: PPD40_Trigger
-    3300000: PPD40_Body1
-    3300002: PPD40_Drum1
-    3300004: PPD40_Furnitune1
-    3300006: PPD40_Trigger
-    4300000: PPD40_Drum1
-    4300002: PPD40_Body1
-    4300004: PPD40_Trigger
-    4300006: PPD40_Furnitune1
-    9500000: //RootNode
+    100000: imagePlane1
+    100002: //RootNode
+    100004: M1891_30_Bayonet
+    400000: imagePlane1
+    400002: //RootNode
+    400004: M1891_30_Bayonet
+    2100000: M1891_30_BayonetLamb
+    2300000: M1891_30_Bayonet
+    3300000: M1891_30_Bayonet
+    4300000: M1891_30_Bayonet
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: PPD40_Body
-    second: {fileID: 2100000, guid: 93523fbba1be02d47903af1bbf2ee468, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PPD40_Furnitune
-    second: {fileID: 2100000, guid: 6498ad91918035b4da62c83df080f8d0, type: 2}
+      name: M1891_30_BayonetLamb
+    second: {fileID: 2100000, guid: 0a3b53835f7be4b4b982b216062c198d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
