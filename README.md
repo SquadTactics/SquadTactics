@@ -1,3 +1,2 @@
 # Squad Tactics
-
-Repositório do jogo SquadTactics.
+> Repositório do jogo SquadTactics.
