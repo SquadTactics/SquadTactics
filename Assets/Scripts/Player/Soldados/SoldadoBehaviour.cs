@@ -6,12 +6,10 @@ using System;
 public abstract class SoldadoBehaviour : PlayerBehaviour
 {
 
-    // Use this for initialization
-    void Start()
-    {
-        this.GetComponents();
-        this.podeJogar = true;
-    }
+    protected float delay;
+    protected float precisao;
+    protected float tamanho;
+    protected float danoCorpoACorpo;
 
     // Update is called once per frame
     void Update()
@@ -100,12 +98,5 @@ public abstract class SoldadoBehaviour : PlayerBehaviour
     public override void LevaDano(float dano)
     {
         this.vida -= dano;
-    }
-
-    private void GetComponents()
-    {
-        this.agente = this.GetComponent<NavMeshAgent>();
-        this.weapon = this.GetComponentInChildren<WeaponBehaviour>();
-        this.vida = 100;
     }
 }
