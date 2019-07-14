@@ -7,12 +7,14 @@ public class K98Behaviour : MonoBehaviour
     public float dano;
     public float alcance;
     public float penetracao;
+    public float tempoEntreGolpes;
 
     // Use this for initialization
     void Start()
     {
         this.dano = 25;
         this.alcance = 2;
+        this.tempoEntreGolpes = 3;
         this.penetracao = 1;
     }
 

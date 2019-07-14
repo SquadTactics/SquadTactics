@@ -17,6 +17,9 @@ public abstract class WeaponBehaviour : MonoBehaviour
     protected float danoLongo;
     protected float dano;
 
+    protected float alcance;
+    protected float precisao;
+
     // Speed that the gun can re-shoot.
     protected float velocidade;
 
@@ -24,10 +27,11 @@ public abstract class WeaponBehaviour : MonoBehaviour
     protected int capacidade;
 
     // Penetration of weapon.
-    protected int penetracao;
+    protected float penetracao;
 
     // Tempo para arma voltar a atirar depois de ser totalmente descarregada(Tempo de reload).
     protected float tempo;
+    protected float tempoEntreDisparos;
 
     // Verifica se a arma pode disparar.
     protected bool podeAtirar;

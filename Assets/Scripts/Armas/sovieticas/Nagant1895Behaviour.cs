@@ -8,7 +8,15 @@ public class Nagant1895Behaviour : WeaponBehaviour
     void Start()
     {
         this.podeAtirar = true;
+        this.dano = 12;
+        this.alcance = 0.4f;
         this.capacidade = 7;
+        this.tempo = 14;
+        this.tempoEntreDisparos = 2;
+        this.precisao = 0.5f;
+        this.penetracao = 0.5f;
+
+
         this.danoPequena = 10;
         this.danoMedio = 7.5f;
         this.danoLongo = 5;
@@ -17,6 +25,10 @@ public class Nagant1895Behaviour : WeaponBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButton(0))
+        {
+            this.Atirar(new LandserBehaviour());
+        }
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -29,6 +41,7 @@ public class Nagant1895Behaviour : WeaponBehaviour
                 StartCoroutine(Recarregar());
             } else
             {
+                Debug.Log("AQUI");
                 Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
                 this.capacidade--;
                 StartCoroutine(this.EsperarPraAtirar());
@@ -38,15 +51,14 @@ public class Nagant1895Behaviour : WeaponBehaviour
 
     public override IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(this.tempo);
         this.capacidade = 7;
         this.podeAtirar = true;
     }
 
     private IEnumerator EsperarPraAtirar()
     {
-        int tempo = Random.Range(4, 7);
-        yield return new WaitForSeconds(tempo);
+        yield return new WaitForSeconds(this.tempoEntreDisparos);
         this.podeAtirar = true;
     }
 

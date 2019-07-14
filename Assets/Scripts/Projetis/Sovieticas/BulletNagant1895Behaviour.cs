@@ -6,6 +6,7 @@ public class BulletNagant1895Behaviour : BulletsBehaviour
 
     // Use this for initialization
     void Start() {
+        this.origem = this.transform.position;
         this.velocidade = 15;
         this.danoPequena = 10;
         this.danoMedio = 7.5f;
