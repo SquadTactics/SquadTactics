@@ -11,7 +11,13 @@ public class NagantM1891Behaviour : WeaponBehaviour
     void Start()
     {
         this.podeAtirar = true;
-        this.capacidade = 7;
+        this.dano = 23;
+        this.alcance = 0.8f;
+        this.capacidade = 5;
+        this.tempo = 5;
+        this.tempoEntreDisparos = 5;
+        this.precisao = 0.8f;
+
         this.danoPequena = 22;
         this.danoMedio = 16.5f;
         this.danoLongo = 11;
@@ -35,6 +41,11 @@ public class NagantM1891Behaviour : WeaponBehaviour
             this.podeAtirar = true;
         }*/
 
+        if (Input.GetMouseButton(0))
+        {
+            this.Atirar(new LandserBehaviour());
+        }
+
     }
 
     public override void Atirar(PlayerBehaviour alvo)
@@ -52,18 +63,11 @@ public class NagantM1891Behaviour : WeaponBehaviour
                 StartCoroutine(Recarregar());
             } else
             {
-                float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
-                if (distancia > 20)
-                {
-                    return;
-                }
-                else
-                {
-                    this.podeAtirar = false;
-                    Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
-                    this.capacidade--;
-                    StartCoroutine(this.EsperarPraAtirar());
-                }
+                //float distancia = Vector3.Distance(this.canoDaArma.transform.position, alvo.transform.position);
+                this.podeAtirar = false;
+                Instantiate(this.projetil, this.canoDaArma.transform.position, this.canoDaArma.rotation);
+                this.capacidade--;
+                StartCoroutine(this.EsperarPraAtirar());
             }
         }
         this.podeAtirar = false;
@@ -71,21 +75,21 @@ public class NagantM1891Behaviour : WeaponBehaviour
 
     private IEnumerator EsperarPraAtirar()
     {
-        int tempo = Random.Range(4, 8);
+        float tempo = this.tempoEntreDisparos;
         yield return new WaitForSeconds(tempo);
         this.podeAtirar = true;
     }
 
     private IEnumerator Esperar()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(this.tempo);
         this.atacarComBaioneta = true;
     }
 
     public override IEnumerator Recarregar()
     {
-        yield return new WaitForSeconds(3);
-        this.capacidade = 7;
+        yield return new WaitForSeconds(this.tempo);
+        this.capacidade = 5;
         this.podeAtirar = true;
     }
 
