@@ -39,7 +39,7 @@ public class Kar98KBehaviour : WeaponBehaviour
     {
         if (this.atacarComFaca)
         {
-            this.atacarComFaca = false;
+            // this.atacarComFaca = false;
             this.faca.Atacar(alvo);
             StartCoroutine(Esperar());
         }

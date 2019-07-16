@@ -256,6 +256,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1884341492}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &156796194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156796190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b9a24ee543cb9d4eaa82a83a7b2e6c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  alvo: {fileID: 0}
+  vida: 0
+  modoAtaque: 0
+  bomba: {fileID: 0}
+  podeJogar: 0
+  lancarBomba: {fileID: 0}
 --- !u!65 &156796196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -725,7 +744,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 60, y: 0, z: 0}
 --- !u!114 &1061355413
 MonoBehaviour:
@@ -740,6 +759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sargentoPos: {fileID: 156796193}
+  sargento: {fileID: 156796194}
 --- !u!1001 &1174989984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1031,7 +1051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2f776fac6c480e84284fffae79f71edf, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2f776fac6c480e84284fffae79f71edf, type: 3}
       propertyPath: m_LocalRotation.y

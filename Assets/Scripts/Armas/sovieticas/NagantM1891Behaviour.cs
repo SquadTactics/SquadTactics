@@ -52,7 +52,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
     {
         if (atacarComBaioneta)
         {
-            this.atacarComBaioneta = false;
+            // this.atacarComBaioneta = false;
             this.baioneta.Atacar(alvo);
             StartCoroutine(Esperar());
         }
@@ -70,6 +70,7 @@ public class NagantM1891Behaviour : WeaponBehaviour
                 StartCoroutine(this.EsperarPraAtirar());
             }
         }
+
         this.podeAtirar = false;
     }
 
