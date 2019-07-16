@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SquadBehaviour : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class SquadBehaviour : MonoBehaviour
         this.GetComponent<MovimentoBehaviour>().podeMover = true;
         time1 = Instantiate(grupo1Prefab, new Vector3((sargento.transform.position.x) - 10, sargento.transform.position.y, sargento.transform.position.z), Quaternion.identity) as GameObject;
         time2 = Instantiate(grupo2Prefab, new Vector3((sargento.transform.position.x) + 10, sargento.transform.position.y, sargento.transform.position.z), Quaternion.identity) as GameObject;
+        time1.AddComponent<NavMeshAgent>();
+        time2.AddComponent<NavMeshAgent>();
         time1.AddComponent<MovimentoBehaviour>();
         time2.AddComponent<MovimentoBehaviour>();
         //pelotao1.transform.parent = sargento.transform;
