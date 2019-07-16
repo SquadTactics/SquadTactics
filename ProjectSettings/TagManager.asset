@@ -9,6 +9,7 @@ TagManager:
   - landser
   - Unidade
   - strelok
+  - relevo
   layers:
   - Default
   - TransparentFX
